@@ -73,8 +73,8 @@ Follow the links to the wiring configuration guides specific to your printer and
 
 ## Voron 2
 * V2 - RAMPS (_depricated_)
-* [V2 - SKR 1.3](v2_skr13_wiring)
-* [V2 - SKR 1.4](v2_skr14_wiring)
+* [V2 - SKR 1.3](./v2_skr13_wiring.md)
+* [V2 - SKR 1.4](./v2_skr14_wiring.md)
 * V2 - FLY (_coming soon_)
 
 ## Voron Switchwire
