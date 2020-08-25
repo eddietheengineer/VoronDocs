@@ -28,7 +28,7 @@ The [Switchwire](http://vorondesign.com/voron_switchwire) is the reimagining of 
 
 ## Printing Parts
 
-As Voron printers are typically enclosed and are designed to be able to print at higher temperatures the printed parts are strongly recommended to be printed in ABS for temperature resistance.  If the prospective Voron owner is not currently able to print in ABS for some reason, we recommend looking at the Voron [print-it-forward (PIF) program](https://pif.voron.dev), where individuals can submit a request for another Voron owner to print the minimum functional parts for them.
+As Voron printers are strongly recommended to be printed in ABS or ABS+ for temperature resistance.  Questions?  [Check the FAQ](./faq.md#printing-parts)
 
 ## Ordering Parts
 
