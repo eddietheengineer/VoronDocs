@@ -12,7 +12,7 @@ If you need help and are not there already, please join the [Discord](https://di
 # [Wiring Information](./wiring/README.md)
 
 ---
-# [Software Installation](./software.md)
+# [Software Installation](./software/README.md)
 
 ---
 # [Initial Startup Checks](./startup.md)
