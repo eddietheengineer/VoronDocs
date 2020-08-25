@@ -2,7 +2,7 @@
 
 ## Initial Preparation
 
-* If using the TMC2209 stepper drivers, use a small par of wire cutters and remove the pin marked in purple.  This is to disable sensorless homing which is not needed for the V2.
+* If using the TMC2209 stepper drivers, use a small pair of wire cutters and remove the pin marked in purple.  This is to disable sensorless homing which is not needed for the V2.
 
 ![](./images/v2-skr14-initial-preparation.png)
 
@@ -25,12 +25,13 @@
 
 * Place stepper drivers for Z0, Z1, Z2, and Z3 into positions X, Y, Z, and E0
 * Plug in stepper motors for Z0, Z1, Z2, and Z3 into positions X, Y, Z, and E0
-* Plug Bed Heater Temp in to TB (P0.23)
+* Plug Bed Heater thermistor in to TB (P0.23)
 * Plug in Exhaust Fan in to HE0 (P2.7)
 * Plug in Controller Fan in to HE1 (P2.4)
 * Plug SSR Control for Heated Bed in to Fan (P2.3)
 * Plug Z Endstop Switch into -Z (P1.25)
-* Plug Probe GND and Signal (with BAT85 diode) in to +Z (P1.24
+* Plug Probe PWR and GND into FAN2
+* Plug Probe Signal (with BAT85 diode) in to Probe (P0.10)
 * Plug display wires in to EXP1 and EXP2
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
