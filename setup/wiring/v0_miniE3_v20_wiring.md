@@ -22,4 +22,4 @@
 
 For reference, here is the pinout of the SKR mini E3 V1.2
 
-![](./images/miniE3-V20-pinout.png)
+![](./images/miniE3-v20-pinout.png)
