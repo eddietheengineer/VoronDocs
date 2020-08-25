@@ -30,8 +30,8 @@ git clone https://github.com/KevinOConnor/klipper
 
 ### Firmware Flashing
 
-* [SKR 1.3](./klipper/v2_skr13_klipper.md)
-* [SKR 1.4](./klipper/v2_skr13_klipper.md)
+* [SKR 1.3](./klipper/skr13_klipper.md)
+* [SKR 1.4](./klipper/skr13_klipper.md)
 * SKR mini e3 V1.2 (_coming soon_)
 * SKR mini e3 V2.0 (_coming soon_)
 * FYSETC S6 (_coming soon_)
@@ -73,12 +73,12 @@ Locate the section starting with [mcu].  The V2 will have an additional section 
 
 * Begin with all controllers disconnected from the Raspberry Pi.
 * For printers with just one controller, connect that controller to the Raspberry Pi.  For printers with two controllers, connect the X/Y/E controller.
-* On the Raspberry Pi, run `ls -l /dev/serial-by-id/`.  This is a slight difference from previous instructions as the USB ID never changes even if the USB cables are switched.
+* On the Raspberry Pi, run `ls -l /dev/serial-by-id/`.
 * The listing should look similar to this:
 
-![](.images/file.png)
+![](./images/file.png)
 
-**Note:** If the device identifier has the word 'marlin' in it, the Klipper firmware is not loaded properly.  Go back and re-load the Klipper firmware before continuing.
+**Note:** If the device identifier has the word 'marlin' in it, the Klipper firmware is not loaded properly.  Go back and [re-load the Klipper firmware](./software#firmware-flashing) before continuing.
 
 * Copy the device ID (e.g. _asdkjfhasdkfjhaskdjfahs_) from the terminal window and paste into a temporary text file.
 *  Open the configurtion file with `nano ~/printer.cfg` and navigate to the **[mcu]** section.  Modiffy the "serial: /dev/serial" line and paste in the controller path so that is looks like the following: `serial: /dev/serial/by-id/asdhsdafhshfgsdh`
@@ -92,7 +92,7 @@ This section only applies to printers with more than one controller.
 * On the Raspberry Pi, re-run `ls -l /dev/serial-by-id/`.
 * The listing should look similar to this:
 
-![](.images/file2.png)
+![](./images/file2.png)
 
 **Note:** If the device identifier has the word 'marlin' in it, the Klipper firmware is not loaded properly.  Go back and re-load the Klipper firmware before continuing.
 
