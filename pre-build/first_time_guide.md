@@ -42,3 +42,4 @@ There are a growing number of suppliers that are assembling kits to build Voron 
 
 * Get on Discord!  There is a very active community on the [Voron Discord Server](https://discord.gg/voron).
 * When purchasing small items, buy extras (round up).  Having a few extra screws or connectors around may actually help you later.
+* Check the [FAQ](./faq.md)
