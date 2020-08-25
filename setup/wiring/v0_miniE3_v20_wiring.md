@@ -20,6 +20,6 @@
 
 ## Mini E3 V2.0 Pinout
 
-For reference, here is the pinout of the SKR mini E3 V1.2
+For reference, here is the pinout of the SKR mini E3 V2.0
 
 ![](./images/miniE3-v20-pinout.png)
