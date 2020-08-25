@@ -68,7 +68,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 
 ## Voron 1
 * V1 - SKR 1.3 (_coming soon_)
-* V1 - SKR 1.4 (_coming soon_)
+* [V1 - SKR 1.4](./v1_skr14_wiring.md)
 * V1 - FYSETC S6 (_coming soon_)
 
 ## Voron 2
