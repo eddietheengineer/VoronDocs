@@ -30,10 +30,10 @@ git clone https://github.com/KevinOConnor/klipper
 
 ### Firmware Flashing
 
-* [SKR 1.3](./klipper/skr13_klipper.md)
-* [SKR 1.4](./klipper/skr13_klipper.md)
-* SKR mini e3 V1.2 (_coming soon_)
-* SKR mini e3 V2.0 (_coming soon_)
+* [SKR 1.3](./skr13_klipper.md)
+* [SKR 1.4](./skr13_klipper.md)
+* [SKR mini e3 V1.2](./miniE3_klipper.md)
+* [SKR mini e3 V2.0](./miniE3_klipper.md)
 * FYSETC S6 (_coming soon_)
 * FLY (_coming soon_)
 
