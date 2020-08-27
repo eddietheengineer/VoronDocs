@@ -40,5 +40,5 @@
 
 For reference, here is the pinout of the FLYF407ZG
 
-![](./images/flyf407zg_pinout.png
-)
+![](./images/flyf407zg_pinout.png)
+![](./images/flyf407zg_port_illustration.png)
