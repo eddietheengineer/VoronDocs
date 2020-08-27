@@ -2,7 +2,9 @@
 
 ## Initial Preparation
 
-![](./images/v2-skr13-initial-preparation.png)
+* Reconfigure the on-board jumpers as shown.
+
+![](./images/skr13-preparation.png)
 
 ## MCU X/Y/E, Hot End
 
@@ -39,4 +41,4 @@
 
 For reference, here is the pinout of the SKR 1.3
 
-![](./images/skr13-pinout.png)
+![](./images/SKR-V1.3-pinout.jpg)

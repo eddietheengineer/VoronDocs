@@ -1,14 +1,10 @@
-# Voron V1 - SKR 1.4 Wiring
+# Voron V1 - SKR 1.3 Wiring
 
 ## Initial Preparation
 
-* If using the TMC2209 stepper drivers, use a small pair of wire cutters and remove the pin marked in purple.  This is to disable sensorless homing which is not needed for the V2.
-
-![](./images/tmc2209-pin-removal.png)
-
 * Reconfigure the on-board jumpers as shown.
 
-![](./images/skr14-preparation.png)
+![](./images/skr13-preparation.png)
 
 ## MCU
 
@@ -30,10 +26,10 @@
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
 
-![](./images/v1-skr14-mcu.png)
+![](./images/v1-skr13-mcu.png)
 
-## SKR 1.4 Pinout
+## SKR 1.3 Pinout
 
-For reference, here is the pinout of the SKR 1.4
+For reference, here is the pinout of the SKR 1.3
 
-![](./images/SKR-V1.4-pinout.jpg)
+![](./images/SKR-V1.3-pinout.jpg)

@@ -60,26 +60,30 @@ Wiring mechanical endstop switches for NC operation is easy as the BOM spec swit
 
 ## Controller (MCU) Wiring
 
-Follow the links to the wiring configuration guides specific to your printer and controller selection.  There are other controllers on the market that may work (such as Duet), but those are not typically used so standard configurations have not been developed.
+Follow the links to the wiring configuration guides specific to your printer and controller selection.  There are other controllers on the market that may work (such as Duet), but those are not commonly used so standard configurations have not been developed.
 
-## Voron 0
+### Voron 0
 * [V0 - mini e3 V1.2](./v0_miniE3_v12_wiring.md)
 * [V0 - mini e3 V2.0](./v0_miniE3_v20_wiring.md)
 
-## Voron 1
-* V1 - SKR 1.3 (_coming soon_)
+### Voron 1
+* [V1 - SKR 1.3](./v1_skr13_wiring.md)
 * [V1 - SKR 1.4](./v1_skr14_wiring.md)
-* V1 - FYSETC S6 (_coming soon_)
 
-## Voron 2
-* V2 - RAMPS (_depricated_)
+### Voron 2
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)
 * [V2 - SKR 1.4](./v2_skr14_wiring.md)
-* V2 - FLY (_coming soon_)
+* [V2 - FLYboard FLYF407ZG](./v2_flyf407zg_wiring.md)
 
-## Voron Switchwire
-* VSW - mini e3 V1.2 (_coming soon_)
-* VSW - mini e3 V2.0 (_coming soon_)
+### Voron Switchwire
+* [VSW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
+* VSW - Einsy Rambo (_coming soon_)
+
+## Additional Items
+
+### Mini12864 Display (V1, V2, Switchwire)
+
+If installing a Mini12864 display, please follow the [Mini12864 Klipper Guide](./mini12864_klipper_guide.md)
 
 ### Using non-24V fans with a 24V powered MCU
 

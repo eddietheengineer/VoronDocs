@@ -4,7 +4,11 @@
 
 * If using the TMC2209 stepper drivers, use a small pair of wire cutters and remove the pin marked in purple.  This is to disable sensorless homing which is not needed for the V2.
 
-![](./images/v2-skr14-initial-preparation.png)
+![](./images/tmc2209-pin-removal.png)
+
+* Reconfigure the on-board jumpers as shown.
+
+![](./images/skr14-preparation.png)
 
 ## MCU X/Y/E, Hot End
 
@@ -42,4 +46,4 @@
 
 For reference, here is the pinout of the SKR 1.4
 
-![](./images/skr14-pinout.png)
+![](./images/SKR-V1.4-pinout.jpg)
