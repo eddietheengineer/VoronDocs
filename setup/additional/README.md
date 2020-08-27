@@ -7,6 +7,7 @@ These documents cover additional and advanced setup guides.
 
 Additional documentation for common alternate hardware and other configurations.
 
+* [Mini12864 Setup](./mini12864_klipper_guide.md)
 * [Hall Effect Wiring / Setup Guide]()
 * [Klipper Expander]()
 * [Notepad++ Configuration Editing (Windows)]()
