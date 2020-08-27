@@ -34,8 +34,7 @@ git clone https://github.com/KevinOConnor/klipper
 * [SKR 1.4](./skr13_klipper.md)
 * [SKR mini e3 V1.2](./miniE3_klipper.md)
 * [SKR mini e3 V2.0](./miniE3_klipper.md)
-* FYSETC S6 (_coming soon_)
-* FLY (_coming soon_)
+* [FLY FLYF407ZG](./flyf407zg_klipper.md)
 
 ### Klipper Octoprint Configuration
 
@@ -56,8 +55,8 @@ Download the respective Voron base configuration file from the following links:
 * [V1 SKR 1.4](https://raw.githubusercontent.com/VoronDesign/Voron-1/Voron1.8/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg)
 * [V2 SKR 1.3](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
 * [V2 SKR 1.4](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.4/Voron2_SKR_14_Config.cfg)
-* [VSW SKR mini e3 V2.0](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/skr_mini_e3_v2_config.cfg)
-* [VSW Einsy Rambo](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg)
+* [SW SKR mini e3 V2.0](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/skr_mini_e3_v2_config.cfg)
+* [SW Einsy Rambo](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg)
 
 Using a secure file transfer program (WinSCP, Cyberduck, Notepad++, NppFT, BBEdit, scp), transfer the downloaded file to your Raspberry Pi into the folder `~/klipper/config`.
 
