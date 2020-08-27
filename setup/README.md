@@ -49,5 +49,6 @@ These guides would not exist without contributions from the following people:
 * Timmitt V2.003
 * insurgus V2.278
 * Defib V2.213
+* antage V2.521
 * newb
 * mjoaris
