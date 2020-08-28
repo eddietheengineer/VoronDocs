@@ -2,6 +2,10 @@
 
 Tuning steps and processes after everything is working.
 
+## Gantry Racking
+
+Check out [Nero's video on gantry racking](https://www.youtube.com/watch?v=cOn6u9kXvy0)
+
 ## Belt Tension
 
 1. Move your gantry so the side belts from the front idlers to the XY joints are separated center to center 150mm
