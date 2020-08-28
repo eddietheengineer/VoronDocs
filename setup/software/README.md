@@ -75,12 +75,12 @@ Locate the section starting with [mcu].  The V2 will have an additional section 
 * On the Raspberry Pi, run `ls -l /dev/serial-by-id/`.
 * The listing should look similar to this:
 
-![](./images/file.png)
+![](./images/one_mcu.png)
 
 **Note:** If the device identifier has the word 'marlin' in it, the Klipper firmware is not loaded properly.  Go back and [re-load the Klipper firmware](./software#firmware-flashing) before continuing.
 
-* Copy the device ID (e.g. _asdkjfhasdkfjhaskdjfahs_) from the terminal window and paste into a temporary text file.
-*  Open the configurtion file with `nano ~/printer.cfg` and navigate to the **[mcu]** section.  Modiffy the "serial: /dev/serial" line and paste in the controller path so that is looks like the following: `serial: /dev/serial/by-id/asdhsdafhshfgsdh`
+* Copy the device ID (e.g. _usb-Klipper\_lpc1768\_1FB0000802094AAF07825E5DC52000F5-if00_) from the terminal window and paste into a temporary text file.
+*  Open the configurtion file with `nano ~/printer.cfg` and navigate to the **[mcu]** section.  Modiffy the "serial: /dev/serial" line and paste in the controller path so that is looks like the following: `serial: /dev/serial/by-id/usb-Klipper_lpc1768_1FB0000802094AAF07825E5DC52000F5-if00`
 *  Exit the text editor with CTRL-X  and save when prompted.
 
 ### Update Second Controller Path (V2)
@@ -91,12 +91,12 @@ This section only applies to printers with more than one controller.
 * On the Raspberry Pi, re-run `ls -l /dev/serial-by-id/`.
 * The listing should look similar to this:
 
-![](./images/file2.png)
+![](./images/two_mcu.png)
 
 **Note:** If the device identifier has the word 'marlin' in it, the Klipper firmware is not loaded properly.  Go back and re-load the Klipper firmware before continuing.
 
-* Identify the new device ID (e.g. _asdkjfhasdkfjhaskdjfahs_) and copy from the terminal window and paste into a temporary text file.
-*  Open the configurtion file with `nano ~/printer.cfg` and navigate to the **[mcu z]** section.  Modiffy the "serial: /dev/serial" line and paste in the controller path so that is looks like the following: `serial: /dev/serial/by-id/asdhsdafhshfgsdh`
+* Identify the new device ID (e.g. _usb-Klipper\_lpc1768\_0650000AA39C48AFABD4395DC22000F5-if00_) and copy from the terminal window and paste into a temporary text file.
+*  Open the configurtion file with `nano ~/printer.cfg` and navigate to the **[mcu z]** section.  Modiffy the "serial: /dev/serial" line and paste in the controller path so that is looks like the following: `serial: /dev/serial/by-id/usb-Klipper_lpc1768_0650000AA39C48AFABD4395DC22000F5-if00`
 *  Exit the text editor with CTRL-X  and save when prompted.
 
 ### Updating Printer Specific Settings
