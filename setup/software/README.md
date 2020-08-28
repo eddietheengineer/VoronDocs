@@ -32,8 +32,8 @@ git clone https://github.com/KevinOConnor/klipper
 
 * [SKR 1.3](./skr13_klipper.md)
 * [SKR 1.4](./skr13_klipper.md)
-* [SKR mini e3 V1.2](./miniE3_klipper.md)
-* [SKR mini e3 V2.0](./miniE3_klipper.md)
+* [SKR mini e3 V1.2](./miniE3_v12_klipper.md)
+* [SKR mini e3 V2.0](./miniE3_v20_klipper.md)
 * [FLY FLYF407ZG](./flyf407zg_klipper.md)
 
 ### Klipper Octoprint Configuration
