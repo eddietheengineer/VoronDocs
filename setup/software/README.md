@@ -72,7 +72,7 @@ Locate the section starting with [mcu].  The V2 will have an additional section 
 
 * Begin with all controllers disconnected from the Raspberry Pi.
 * For printers with just one controller, connect that controller to the Raspberry Pi.  For printers with two controllers, connect the X/Y/E controller.
-* On the Raspberry Pi, run `ls -l /dev/serial-by-id/`.
+* On the Raspberry Pi, run `ls -l /dev/serial/by-id/`.
 * The listing should look similar to this:
 
 ![](./images/one_mcu.png)
@@ -88,7 +88,7 @@ Locate the section starting with [mcu].  The V2 will have an additional section 
 This section only applies to printers with more than one controller.
 
 * Connect the Z controller to the Raspberry Pi.
-* On the Raspberry Pi, re-run `ls -l /dev/serial-by-id/`.
+* On the Raspberry Pi, re-run `ls -l /dev/serial/by-id/`.
 * The listing should look similar to this:
 
 ![](./images/two_mcu.png)
