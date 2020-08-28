@@ -9,8 +9,8 @@ Additional documentation for common alternate hardware and other configurations.
 
 ## Tools
 
-* [Notepad++ Configuration Editing (Windows)]()
-* [bbEdit Configuration Editing (macOS)]()
+* [Notepad++ Configuration Editing (Windows)](./notepadplusplus.md)
+* [bbEdit Configuration Editing (macOS)](./bbedit.md)
 
 ## Hardware
 
