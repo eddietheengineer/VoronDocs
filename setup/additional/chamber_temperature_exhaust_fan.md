@@ -64,7 +64,7 @@ gcode:
 
 Restart Klipper with a `FIRMWARE_RESTART`
 
-With this configuration, the fan will run anytime the chamber temperature is above 35C.  This is configurable later.
+With this configuration, the fan will run at 100% anytime the chamber temperature is above 35C.  This is configurable later.
 
 ## OctoPrint Configuration
 
@@ -72,11 +72,11 @@ In Octoprint, enable the chamber temperature sensor by going into  Settings -> P
 
 ![](./images/octoprint_chamber_temp_checkbox.png)
 
-The dat
+The chamber temperature will now be displayed and graphed in the temperature chart.  None of the Voron printers include a chamber heater so setting the chamber temperature will not function.
 
 ## Display Configuration
 
-To display the chamber temperature on the fron panel display, extra work is required.
+To display the chamber temperature on the front panel display, additional configuration is required.
 
 * Download the [lcd_tweaks.cfg](./lcd_tweaks.cfg) configuration file and load onto the pi.
 * Edit _printer.cfg_ and add the line `[include lcd_tweaks.cfg]` to include the file.
@@ -84,7 +84,7 @@ To display the chamber temperature on the fron panel display, extra work is requ
 * Restart Klipper with a `FIRMWARE_RESTART`
 * If the display does not come on or only partially displays, check the `/tmp/klippy.log` for more information.
 
-## Temperature Control (if chosen)
+## Exhaust Fan Temperature Control (if chosen)
 
 In the slicer or with other commands, run the `M141` command anytime to change the set point of the exhaust fan.
 
