@@ -214,3 +214,6 @@ New Config Value = Old Config Value * (Actual Extruded Amount/Target Extruded Am
 Note that a higher configuration value means that less filament is being extruded.
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
+
+---
+## Next: [Slicer Setup](./slicer.md)

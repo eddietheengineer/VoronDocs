@@ -25,7 +25,7 @@ In the menu structure there are a number of items to be selected.
 * Enable "Use USB for communication (instead of serial)"
 * Configure "GPIO pins to set at micro-controller startup" to '!PC13'.
 
-![](./images/miniE3_klipper_menuconfig.png)
+![](./images/miniE3_v12_klipper_menuconfig.png)
 
 Once the configuration is selected, select "Exit" and "Yes" if asked to save the configuration.
 

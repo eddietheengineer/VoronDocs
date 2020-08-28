@@ -168,3 +168,5 @@ Once the underlying issue is corrected, use the `FIRMWARE_RESTART` command to re
 
 ___Coming Soon___
 
+---
+## Next: [Initial Startup](../startup.md)

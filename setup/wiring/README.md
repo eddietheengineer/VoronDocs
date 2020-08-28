@@ -24,6 +24,10 @@ Please see the associated assembly guides for power supply configurtions.
 ---
 # Wiring Configuration / Setup
 
+## Gantry Routing
+
+While some extruder motors and inductive probes come with wire leads long enough to reach part or all of the way down the cable chain, resist the urge to use them.  The wires typically found in them are not rated for the constant bending encountered in the cable chains and may break much sooner than desired.  Terminate all connections to silicone or PTFE wire before entering the cable chain.
+
 ## Wire Terminals
 
 Different controller boards use different terminal types.  The RAMPS boards use Dupont terminals but the SKR boards use JST-XH terminals.  If using an SKR board, a JST-XH connector kit is required with 2-pin, 3-pin, and 4-pin connectors (see the BOM).  Unlike Dupont connectors, JST-XH connectors are keyed and will onyl fit one orientation so pay close attention when inserting pins.
@@ -95,3 +99,5 @@ Note: In the diagram below, only DC wires are shown.  Red represents V+, black r
 
 ![](./images/gnd_switch_example.png)
 
+----
+## Next: [Software](../software/README.md)

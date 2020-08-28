@@ -30,9 +30,9 @@ Once you are printing (with your printer fully assembled), take a quick video, u
 
 ![](./images/voron_cereal.png)
 
-## Print Troubleshooting
+## Print Tuning / Troubleshooting
 
-Please refer to the [print troubleshooting](../support/print_troubleshooting.md) guide for more detailed coverage of diagnosing print issues.
+Please refer to the [print tuning / troubleshooting](../support/print_tuning_troubleshooting.md) guide for more detailed coverage of diagnosing print issues.
 
 ---
 # [Additional Docs / Advanced Tuning](./additional/README.md)
