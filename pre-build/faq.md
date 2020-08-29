@@ -4,11 +4,11 @@
 
 ### Can I print in (PLA, PETG, resin, etc.)?
 
-Voron printers are designed to be able to print ABS and other materials that require elevated chamber temperatures in excess of 60C.  As a result materials that have a heat deflection temperature or glass transition temperature of 90C or higher are strongly recommended for making the Voron components from.  From a cost/benefit perspective, ABS and ABS+ are the most recommended materials.
+Voron printers are designed to be able to print ABS and other materials that can require elevated chamber temperatures in excess of 60C.  As a result materials that have a heat deflection temperature or glass transition temperature of 90C or higher are strongly recommended for making the Voron components from.  While other materials may meet the requirements, from a cost/benefit perspective, ABS and ABS+ are the most recommended materials.
 
-Most hobby resins have issues with long-term dimensional stability.  Many of them will continue to shrink as the slowly dry out, making them unsuitable for long-term structural use.  There are commercial resins that would likely work but there is no list at this time.
+Most hobby-grade resin prints have issues with long-term dimensional stability.  Many of them will continue to shrink as they slowly dry out, making them unsuitable for long-term structural use.  There are many commercial resins that would likely work but there is no definitive list at this time.
 
-If the prospective Voron owner is not currently able to print in ABS for some reason, we recommend looking at the Voron print-it-forward (PIF) program.  Individuals can submit a request for another Voron owner to print the minimum functional parts for them.
+If the prospective Voron owner is not currently able to print in ABS for any reason, we recommend looking at the Voron print-it-forward (PIF) program.  Individuals can submit a request for another Voron owner to print the minimum functional parts for them.  There are costs and wait times associated.
 
 ### How much filament do I need?
 
@@ -34,15 +34,15 @@ The Dragon standard flow is capable of supporting nozzles up to 0.6mm.  If plann
 
 ### What are the hammer nuts used for?
 
-The hammer nuts are intended to be used with the panel clips to allow easier removal / reinstallation.  It is possible to apply some locktite and create quarter-turn fasteners.
+The hammer nuts are intended to be used with the panel clips to allow easier removal and reinstallation.  It is possible to apply some locktite and create quarter-turn fasteners.
 
 ### What is the Kapton Tape used for?
 
-The inductive probe in the toolhead is heat sensitive.  The kapton tape is helpful to be applied to the inductve probe to protect it from hot end heat.
+The inductive probe in the toolhead is somewhat heat sensitive.  The kapton tape is helpful to be applied to the inductve probe to protect it from radiant hot end heat.
 
 ### What lube should I use?
 
-The currently recommended lube for the linear rails is Mobilus EP2.  Either Super Lube or EP2 is recommended for the extruder gears.
+The currently recommended lube for the linear rails is Mobilux EP2.  Either Super Lube or EP2 is recommended for the extruder gears.
 
 ## Assembly
 
@@ -52,7 +52,7 @@ Measured on the outer diagonals, the frame should be within 2mm.
 
 ### How is the deck panel attached?
 
-The deck panel is sandwiched between the DIN rails and the bed rails.  the bolts go nto the DIN rails, through the deck panel, and into nuts in the bed rails.
+The deck panel is sandwiched between the DIN rails and the bed rails.  The M5 bolts go into the DIN rails, through the deck panel, and into nuts in the bed rails.
 
 ### Should I clean the rails?
 
@@ -60,4 +60,8 @@ Most linear rails are packaged with a simple machine oil applied to the rails an
 
 ### What gauge wire should I use where?
 
-The gantry should be wires with all 24 gauge wire except for the heater, which should be wired with 20 gauge.  This will permit all of the wires to fit within the drag chains.  The power wiring (AC and DC) should be at least 20 gauge, preferably larger (18 or 16 gauge).
+The gantry wiring should be all 24 gauge wire except for the hot end heater, which should be wired with 20 gauge.  This will permit all of the wires to fit within the drag chains.  The power wiring (AC and DC) should be at least 20 gauge, preferably larger (18 or 16 gauge).
+
+### PTFE or Silicone wire?
+
+The BOM currently specifies silicone wire for bend and heat toleraance.  For an increased cost, PTFE wire is a option.  PTFE insulation is thinner and slicker, making it more effective in the drag chains.
