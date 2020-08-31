@@ -9,7 +9,8 @@ Second stage guides for getting the printer printing perfectly.
 
 This area contains guides and documents to help support ongoing printer adjustments and troubleshooting.
 
-[Print Troubleshooting](./print_troubleshooting.md)
+* [Print Troubleshooting](./print_troubleshooting.md)
+* [System Troubleshooting](./system_troubleshooting.md)
 
 Other Guides:
 

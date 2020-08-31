@@ -18,3 +18,10 @@ Printers need maintenance!
 * Relubrication of the movement is only required every few thousend hours if the recommended lubrication was used. Oil based lubrication may need to be reapplied on a much short schedule.
 * Other consumeable need to be replaced on a suitable schedule. PTFE tubes on a 500-1000h schedule, nozzles and PEI as required. Refer to the Consumables section.
 
+### Removing PEI Sheet
+
+_DocJeeves's method:_
+
+You will need isopropyl alcohol (IPA, 90% or better purity) I get a razor blade under the PEI sheet at a corner (or other likely spot), and work a fair bit of it up. Then I grab that lifted PEI corner with a pair of pliers, and pull. Usually the whole PEI sheet will come free, but large chunks of adhesive will remain. I spray that all down with 90% rubbing alcohol (70% may work? Never tried it), and walk away. I come back, and the adhesive is now milky white, and comes off with no fuss with a razor blade
+
+Another method is to put in the freezer, this makes it much easier to remove.
