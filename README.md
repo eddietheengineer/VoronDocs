@@ -10,4 +10,4 @@ To assemble the hardware, please go to the [assembly guides](./assembly) for inf
 
 Once the hardware assembly is complete, please go to the [setup guide](./setup/README.md) to go from assembled hardware to a working printer.
 
-For continued tuing, or if help is needed after the initial setup, check out the [support section](./support/README.md)
+For continued tuning, or if help is needed after the initial setup, check out the [support section](./support/README.md)

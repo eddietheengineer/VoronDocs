@@ -23,7 +23,7 @@ Additional documentation for common alternate hardware and other configurations.
 * [Changing OctoPi Hostname](https://github.com/guysoft/OctoPi/wiki/Changing-the-hostname)
 * [Chamber Temperature Sensor](./chamber_temperature_exhaust_fan.md)
 * [Temperature Controlled Exhaust Fan](./chamber_temperature_exhaust_fan.md)
-* [Macros]()
+* [Macros](./macros.md)
 
 ---
 # Advanced Tuning
