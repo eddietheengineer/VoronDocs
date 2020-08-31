@@ -61,6 +61,8 @@ If the toolhead does not move in the expected or correct direction, refer to the
 
 ![](./images/visual_motor_configuration_guide.png)
 
+**Important:** Do not unplug or re-plug motors from MCUs without powering down the printer.  Damage to MCU may result.
+
 ## Bed locating (V2)
 
 The print bed location of the V2 is much more adjustable than on any of the other models.  Before the 0,0 point and Z endstop locations are set, the physical locations of the Z endstop and print bed need to be finalized.
