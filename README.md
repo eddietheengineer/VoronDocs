@@ -2,6 +2,8 @@
 
 Welcome to the world of Voron 3D printers!
 
+This is the Voron Community Documentation site. All documentation found here is community provided and should be treated as such. It is provided as a resource to share experience from Voron owners.
+
 If you are building a Voron for the first time, please see the [first time builders guide](./pre-build/first_time_guide.md)
 
 For the Bill of Materials / Sourcing Guide, please to the the [main website](http://vorondesign.com)
