@@ -1,14 +1,49 @@
 # Assembly
 
-[V0 Assembly Manual](./V0_Assembly_Manual.pdf)
+## V0
 
-[V2.4 Assembly Manual](./V2.4_Assembly_Manual.pdf)
+### Current
 
-[Nero's video series on assembling a V2.4](https://www.youtube.com/playlist?list=PL7zrGeKp_8CR7oSREn46GCAteJdN9XGzW)
+[V0 Assembly Manual](./manuals/V0_Assembly_Manual.pdf)
+
+[V0 Pocketwatch Manual](./manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
+
+## V1
+
+### Current
+
+(coming soon)
+
+### Historical
+
+[V1.6 Assembly Manual](./manuals/VORON1.6_Manual.pdf)
+
+[V1.0/1.5 Assembly Manual](./manuals/VORON\ Kit\ Manual.pdf)
+
+## V2
+
+### Current
+
+[V2.4 Assembly Manual](./manuals/V2.4_Assembly_Manual.pdf)
+
+### Historical
+
+[V2.2 Assembly Manual](./manuals/VORON2.2_Manual.pdf)
+
+[V2.1 Assembly Manual](./manuals/VORON2.1_Manual.pdf)
+
+## Switchwire
+
+### Current
+
+(coming soon)
 
 ---
 
-Other manuals are still in development.
+
+## Video Guides
+
+[Nero's video series on assembling a V2.4](https://www.youtube.com/playlist?list=PL7zrGeKp_8CR7oSREn46GCAteJdN9XGzW)
 
 ## Tips
 
