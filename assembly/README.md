@@ -16,7 +16,7 @@
 
 ### Historical
 
-[Pervious Versions](./manuals/historical)
+[Previous Versions](./manuals/historical)
 
 ## V2
 
@@ -26,7 +26,7 @@
 
 ### Historical
 
-[Pervious Versions](./manuals/historical)
+[Previous Versions](./manuals/historical)
 
 ## Switchwire
 
