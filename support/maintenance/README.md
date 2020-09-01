@@ -18,6 +18,20 @@ Printers need maintenance!
 * Relubrication of the movement is only required every few thousend hours if the recommended lubrication was used. Oil based lubrication may need to be reapplied on a much short schedule.
 * Other consumeable need to be replaced on a suitable schedule. PTFE tubes on a 500-1000h schedule, nozzles and PEI as required. Refer to the Consumables section.
 
+### Consumables
+
+3d printing filament is not the only consumable of the printer. Nozzles, PTFE tubes and the PEI print surface are also considered consumables and need periodic replacement.
+
+Consider the shipping time for your consumables and if required stock at least one full set of replacement parts.
+
+The PTFE tube will wear due to friction of the filament and should be replaced on a 500h schedule to ensure the best possible print results.
+
+Nozzles will wear depending on the nozzle material and filament used or may simply clog due to dust and debris entering the filament path.
+Brass nozzles will wear even with unfilled filaments, consider replacing them on a schedule to ensure consistent print results.
+
+The PEI surface may get scratched or otherwise damaged by the removal of prints. While keeping a spare sheet is considered good practice consider the ~1 year shelf life of the 3M 468mp sheets that are used to glue the PEI to the plate.
+In addition PEI is not immune to acetone and it will develop cracks with frequent usage of acetone.
+
 ### Removing PEI Sheet
 
 _DocJeeves's method:_

@@ -15,6 +15,7 @@ This area contains guides and documents to help support ongoing printer adjustme
 Other Guides:
 
 * [Z Endstop Configuration](./z_endstop_configuration.md)
+* [Tips for Better Prints](./tips_for_better_prints.md)
 
 # Maintenance
 
