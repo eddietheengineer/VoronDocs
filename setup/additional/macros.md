@@ -42,7 +42,7 @@ The PRINT_START macro is called at the start of every print by slicers that are 
 The PRINT_END macro is called at the end of every print by slicers that are configured to be aware of it.
 
 
-## Additional Macros
+## Extra Macros
 
 The following macros are not included by default.  Please download and look at the [additional macros](./macros_extra.cfg) file for examples.  To include the complete set of additional macros into the configuration, add the following line into the _printer.cfg_:
 
@@ -52,15 +52,21 @@ include [macros_extra.cfg]
 
 ### CG28
 
-A conditional G28.  This can save time in a startup sequence if the system has been activated and homed already.
+A conditional G28.  This can save time in a startup sequence if the system has been activated and homed already.  Commonly used as the part of the G32 sequence.
+
+### G32
+
+An updated G32 to include the CG28.
 
 #### M141
 
-Commonly used to set exhaust fan threshold temperature based on chamber temperature sensor.
-
-### PURGE_BUCKET
-
-Used with a purge bucket and brush, facilitates pre-print nozzle purge and brush pass.
+Used to set exhaust fan threshold temperature based on chamber temperature sensor.
 
 
+## User Macros
 
+| Creator | Macros | Bed Size |
+| --- | --- | --- |
+| [120decibell](./macros_user/120decibell.cfg) | G32, PURGE\_BUCKET, TEST\_SPEED\_FAST | 350mm |
+
+_Contributors - please make sure your macros are well documented!_

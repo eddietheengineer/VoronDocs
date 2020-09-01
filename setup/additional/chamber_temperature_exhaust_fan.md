@@ -64,7 +64,9 @@ gcode:
 
 Restart Klipper with a `FIRMWARE_RESTART`
 
-With this configuration, the fan will run at 100% anytime the chamber temperature is above 35C.  This is configurable later.
+With this configuration, the fan will run at 100% anytime the chamber temperature is above 35C.  The temperature is configurable later.
+
+_Note: As of Klipper 0.8.0, the fan speed is not dynamically changeable using the temperature\_fan object._
 
 ## OctoPrint Configuration
 
