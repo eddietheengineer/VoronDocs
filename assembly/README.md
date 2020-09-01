@@ -16,9 +16,7 @@
 
 ### Historical
 
-[V1.6 Assembly Manual](./manuals/VORON1.6_Manual.pdf)
-
-[V1.0/1.5 Assembly Manual](./manuals/VORON\ Kit\ Manual.pdf)
+[Pervious Versions](./manuals/historical)
 
 ## V2
 
@@ -28,9 +26,7 @@
 
 ### Historical
 
-[V2.2 Assembly Manual](./manuals/VORON2.2_Manual.pdf)
-
-[V2.1 Assembly Manual](./manuals/VORON2.1_Manual.pdf)
+[Pervious Versions](./manuals/historical)
 
 ## Switchwire
 
