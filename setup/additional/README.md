@@ -1,6 +1,6 @@
 # Introduction
 
-These documents cover additional and advanced setup guides.
+These documents cover additional setup guides.
 
 ---
 # Additional
@@ -25,12 +25,4 @@ Additional documentation for common alternate hardware and other configurations.
 * [Temperature Controlled Exhaust Fan](./chamber_temperature_exhaust_fan.md)
 * [Macros](./macros.md)
 
----
-# Advanced Tuning
-
-This section covers advanced tuning parameters that are typically specific to Klipper, but may have similar equivalents in Marlin or other firmware.
-
-* [Bed Mesh]()
-* [Input Shaper]()
-* [Pressure Advance]()
 
