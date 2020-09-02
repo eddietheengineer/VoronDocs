@@ -1,5 +1,16 @@
 # Assembly
 
+## Recommended Tools
+
+* Set of metric hex wrenches ("keys") from at least 1.5 - 5
+* Screwdrivers
+* Crimpers
+	* Molex
+	* Ferrule
+* Needle nose pliers
+* Diagonal wire cutters, small
+* Wire strippers from 16 gauge to 28 gauge
+
 ## V0
 
 ### Current
