@@ -11,6 +11,7 @@ This area contains guides and documents to help support ongoing printer adjustme
 
 * [Print Troubleshooting](./print_troubleshooting.md)
 * [System Troubleshooting](./system_troubleshooting.md)
+* [Common Issues](./common_issues/README.md)
 
 Other Guides:
 
