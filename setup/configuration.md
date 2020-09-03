@@ -20,6 +20,8 @@ Copy the downloaded file into place with `cp ~/klipper/config/FILENAME_OF_VORON_
 
 Review the configuration file by running `nano ~/printer.cfg`
 
+**Klipper is CASE SENSITIVE.  Be sure everything except comments is LOWER CASE.**
+
 ## Required Changes
 
 The following items _must_ be updated before the printer can function.
