@@ -1,5 +1,7 @@
 # Hall Effect Endstop Setup
 
+**The hall effect endstop is only designed for a V2.4.  It will not work on any other models!**
+
 The hall effect endstop board is a non-mechanical alternative to the X and Y endstop switches.  It triggers on magnets installed in the X carriage and one Z joint.
 
 ## Requirements
