@@ -15,7 +15,7 @@ Additional documentation for common alternate hardware and other configurations.
 ## Hardware
 
 * [Mini12864 Klipper Setup](./mini12864_klipper_guide.md)
-* [Hall Effect Wiring / Setup Guide]()
+* [Hall Effect Wiring / Setup Guide](./hall_effect_endstop_setup.md)
 * [Filament Sensor](./filament_runout_sensor.md)
 * [Klipper Expander](https://github.com/VoronDesign/Voron-Hardware/blob/master/Klipper_Expander/Documentation/README.md#setup)
 
