@@ -23,7 +23,7 @@
 
 ### Current
 
-(coming soon)
+[V1.8 Assembly Manual](./manuals/Assembly_Manual_1.8.pdf)
 
 ### Historical
 
