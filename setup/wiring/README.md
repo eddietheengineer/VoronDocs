@@ -6,6 +6,22 @@ When wiring your printer electronics, you will be working with line voltage wiri
 ## Risk of Damage
 **Never plug or unplug any device while the printer is powered.** In addition to being a safety hazard, it is very easy to damage electronic components.  In particular the stepper drivers can be easily damaged by connecting or disconnecting stepper motors while powered.
 
+## Tips
+
+* Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on an sometimes hard to identify!
+* Safety Mains cables should be properly dimensioned. Use at least 20 AWG for mains connections, even better would be 18 AWG.
+* Buy a quality SSR, do not source one from china or your house will catch on fire (see Official Sourcing Sheet)! Add a 115-125°C thermofuse to your bed heater as an additional safety measure.
+* Dont run your bed above 105°C, this greatly reduces the lifespan of the adhesive holding it onto the build plate
+* Connect ground to your bed! Connect a ground to your frame!
+
+## Connectors
+
+The recommended MicroFit 3.0 connectors are specced up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). Adding molex connectors to all stepper motors is useful. You can disconnect motors while moving the gantry manually to avoid damage to the MCU board(s). Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin microfit connector.
+
+## Cables
+
+The specced silicone wire has been chosen because: It is very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. You need at least: 8x 24AWG wires in the z chain (2 steppers) 4x 24AWG wires in the y chain (endstops) 7x 24AWG (probe, fans, thermistor) 2x 20AWG in the x chain (heater) - do not downsize these, they are oversized for safety reasons. You may add additional wires to your cable chains as a replacement in chase of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind the adhesive fails over time due to exposure to above room temperature Cables can be hidden in the rails. Optionally print cable covers for the rails.
+
 ## DC Power Supply Wiring
 Many of the latest generation of Voron printers spec the use of two or more independent power supplies.  That can include 24V, 5V, and 12V power supplies sepending on configuration.
 

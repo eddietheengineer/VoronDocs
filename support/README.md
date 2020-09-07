@@ -9,11 +9,14 @@ Second stage guides for getting the printer printing perfectly.
 
 This area contains guides and documents to help support ongoing printer adjustments and troubleshooting.
 
-[Print Troubleshooting](./print_troubleshooting.md)
+* [Print Troubleshooting](./print_troubleshooting.md)
+* [System Troubleshooting](./system_troubleshooting.md)
+* [Common Issues](./common_issues/README.md)
 
 Other Guides:
 
 * [Z Endstop Configuration](./z_endstop_configuration.md)
+* [Tips for Better Prints](./tips_for_better_prints.md)
 
 # Maintenance
 

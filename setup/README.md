@@ -15,7 +15,10 @@ If you need help and are not there already, please join the [Discord](https://di
 # [Software Installation](./software/README.md)
 
 ---
-# [Initial Startup Checks](./startup.md)
+# [Software Configuration](./configuration.md)
+
+---
+# [Initial Startup and Checks](./startup.md)
 
 ___
 # [Slicer Setup](./slicer.md)

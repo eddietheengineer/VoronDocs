@@ -6,6 +6,10 @@ Any time commands are requested to be issued, those will happen in the 'Terminal
 
 ![](./images/octoprint_terminal_tab.png)
 
+Any time movements need to be made, those will happen in the 'Control' tab of the Octoprint web UI. The numbers underneath X/Y and Z will change the step-size accordingly.
+
+![](./images/Octoprint_Controls.png)
+
 ## Endstop Check
 
 Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
@@ -17,7 +21,7 @@ Recv: x:open y:open z:open
 
 If any of them say "triggered" instead of "open", double-check to make sure none of them are pressed.  Next, manually press the X endstop switch, send the `QUERY_ENDSTOPS` command again, and make sure that the X enstop says "triggered and the Y and Z endstops stay open.  Repeat with the Y and Z endstops.
 
-If it is found that one of the endstops has inverted login (it reads as "open" when it is pressed and "triggered" when not pressed).  In this case, fo into the printer configuration file (typically printer.cfg) and ass or remove the ! in front of the pin identifier.  For example, if the X enstop was inverted, add a ! in front of the pin number as follows:
+If it is found that one of the endstops has inverted login (i.e. it reads as "open" when it is pressed and "triggered" when not pressed), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. For example, if the X endstop was inverted, add a ! in front of the pin number as follows:
 
 `endstop_pin: P1.28` -> `endstop_pin: !P1.28`
 
@@ -38,6 +42,8 @@ Run this command for each of the motors:
 
 This command will move each motor UP first and then DOWN 3 times, one second apart.  If the steppers do not move or make strange noises, check the wiring.  Be sure to watch the Z motion to ensure the direction is correct.  If the Z motor(s) do not move in the correct directions, invert the DIR pin on the printer configuration.
 
+![](./images/V2-motor-positions.png)
+
 ## XY Homing Check
 
 At this point everything is ready to home X and Y.
@@ -45,17 +51,19 @@ At this point everything is ready to home X and Y.
 **Important:** You need to be able to quickly stop the printer in case something goes wrong (e.g. the tool head goes the wrong direction).  There are a few ways of doing this:
 
 1. Use the E-stop button on the display (if installed).  It is the small button underneath the main control knob.  Test the button and see what happens -  Klipper should shut down. Raspberry Pi and OctoPrint should still be running but disconnected from Klipper.  Press "Connect" in the upper left corner of OctoPrint, then in the Octoprint terminal window send a `FIRMWARE_RESTART` to get the printer back up and running.
-2. Have a computer right next to the printer with the `RESTART` command already in the terminal command line in OctoPrint.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
-3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and ro recover would require reinstalling everything from scratch.
+2. Have a computer right next to the printer with the `RESTART` or `M112` command already in the terminal command line in OctoPrint.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
+3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and to recover would require reinstalling everything from scratch.
 
 Once there is a _tested_ process for stopping the printer in case of something going wrong, send a `G28 X Y` command.  This will only home X and Y but not Z.  The tool head should move to the right until it hits the X endstop, then move to the back of the printer until it hits the Y endstop.  In a CoreXY configuration, both motors have to move in order to get the toolhead to go in only and X or Y direction (think Etch A Sketch).
 
-If the toolhead does not move in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invery the direction pin definition (put a ! before the pin indentifier).  If the motors are going in directions that match the lower row, swap your X and Y (A and B) motor connectors on the MCU.
+If the toolhead does not move in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition (put a ! before the pin indentifier).  If the motors are going in directions that match the lower row, swap your X and Y (A and B) motor connectors on the MCU.
 
 * [stepper x] = Motor B
 * [stepper y] = Motor A
 
 ![](./images/visual_motor_configuration_guide.png)
+
+**Important:** Do not unplug or re-plug motors from MCUs without powering down the printer.  Damage to MCU may result.
 
 ## Bed locating (V2)
 
@@ -88,7 +96,11 @@ With the bed and hotend cold (for now), move the probe to the center of the bed 
 
 Example of unstable `PROBE_ACCURACY` (trending downward during warm up).
 
-```Send: PROBE_ACCURACYRecv: // PROBE_ACCURACY at X:125.000 Y:125.000 Z:7.173 (samples=10 retract=2.000 speed=2.0Send: M105Recv: // probe at 125.000,125.000 is z=4.975000
+```
+Send: PROBE_ACCURACY
+Recv: // PROBE_ACCURACY at X:125.000 Y:125.000 Z:7.173 (samples=10 retract=2.000 speed=2.0
+Send: M105
+Recv: // probe at 125.000,125.000 is z=4.975000
 Recv: // probe at 125.000,125.000 is z=4.960000
 Recv: // probe at 125.000,125.000 is z=4.955000
 Recv: // probe at 125.000,125.000 is z=4.952500
@@ -97,7 +109,9 @@ Recv: // probe at 125.000,125.000 is z=4.947500
 Recv: // probe at 125.000,125.000 is z=4.942500
 Recv: // probe at 125.000,125.000 is z=4.937500
 Recv: // probe at 125.000,125.000 is z=4.937500
-Recv: // probe at 125.000,125.000 is z=4.932500Recv: // probe accuracy results: maximum 4.975000, minimum 4.932500, range 0.042500, average 4.949000, median 4.948750,standard deviation 0.011948
+Recv: // probe at 125.000,125.000 is z=4.932500
+Recv: // probe accuracy results: maximum 4.975000, minimum 4.932500, range 0.042500, average 4.949000, median 4.948750,
+standard deviation 0.011948
 ```
 
 ## PID Tune Bed & Hotend
@@ -141,21 +155,21 @@ After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CA
 
 ### Tilt (V1)
 
-The V1 uses a combination of automated and manual bed leveling.  There are two macros build into Klipper to assis with the function.
+The V1 uses a combination of automated and manual bed leveling.  There are two macros built into Klipper to assist with the function.
 
 First run the `Z_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
 
-Second run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions defined in the [screws\_tilt\_adjust section] for level, then return how much to adjust the front thumbscrew by.  Re-run the process at least one more time to verify the cadjustment.
+Second run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions defined in the [screws\_tilt\_adjust section] for level, then return how much to adjust the front thumbscrew by.  Re-run the process at least one more time to verify the adjustment.
 
 After both processes have been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
 
 ### Quad Gantry Level (V2)
 
-Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL`.  It will proce each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
+Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL`.  It will probe each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
 
 If the process fails due to an “_out of bounds_” error, disable your stepper motors and slowly move your gantry or bed by hand until it is approximately flat. Re-home your printer (`G28`) and then rerun the sequence. You may have to run it more than once.  Make sure that the adjustment value for each stepper motor converges to 0. If it diverges, check to make sure you have your stepper motors wired to the correct stepper driver (check documentation).
 
-#### With Heated Bed and Chamber
+### Tilt / QGL With Heated Bed and Chamber (V1, V2)
 
 Run a `G28` command to home the printer since a `SAVE_CONFIG` restarts the printer.
 
@@ -193,11 +207,32 @@ Once you are satisfied with the nozzle height, run `ACCEPT` and then `SAVE_CONFI
 
 If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE`, `ACCEPT`, and then `SAVE_CONFIG`. This will redefine the 0 bed height so you will be able to get closer.
 
-**V2:** If you get this error it likely means that the shaft for your Z Endstop is too long and may catch on the print head during a print. It is best to cut the shaft so that it is within 1mm of the build surface.
+**V2:** If you get this error it likely means that the shaft for your Z Endstop is too long and may catch on the print head during a print. It is best to cut the shaft or raise the bed (with a washer, for instance) so that it is within 1mm of the build surface.
 
 ### Fine Tuning Z Height
 
+#### With LCD Screen
 The Z offset can be adjusted during a print using the Tune menu on the display, and the printer configuration can be updated with this new value. Remember that higher values for the position_endstop means that the nozzle will be closer to the bed.
+
+#### Without LCD Screen
+If you're running your printer headless, the Z height can still be adjusted on-the-fly using the terminal interface.
+
+1) (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
+```
+[gcode_macro ZUP]
+gcode:
+    SET_GCODE_OFFSET Z_ADJUST=0.025 MOVE=1
+
+[gcode_macro ZDOWN]
+gcode:
+    SET_GCODE_OFFSET Z_ADJUST=-0.025 MOVE=1
+```
+
+2) Run ZUP or ZDOWN (or the associated `SET_GCODE_OFFSET` command) as needed in the terminal window until you have perfected your squish.
+3) Run `GET_POSITION` and look for "gcode base". **Note the Z value**.
+
+#### Saving your results
+Update your `position_endstop` in your config file:
 
 New Position = Old Position - Tune Adjustment _(e.g. New Position = Old Position - (-0.050) = Old Position + 0.050)_
 
@@ -214,6 +249,8 @@ New Config Value = Old Config Value * (Actual Extruded Amount/Target Extruded Am
 Note that a higher configuration value means that less filament is being extruded.
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
+
+Typical e-step values should be around 0.00240 for Afterburner or 0.00180 for Mobius.
 
 ---
 ## Next: [Slicer Setup](./slicer.md)

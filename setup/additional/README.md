@@ -1,6 +1,6 @@
 # Introduction
 
-These documents cover additional and advanced setup guides.
+These documents cover additional setup guides.
 
 ---
 # Additional
@@ -15,7 +15,8 @@ Additional documentation for common alternate hardware and other configurations.
 ## Hardware
 
 * [Mini12864 Klipper Setup](./mini12864_klipper_guide.md)
-* [Hall Effect Wiring / Setup Guide]()
+* [Hall Effect Wiring / Setup Guide](./hall_effect_endstop_setup.md)
+* [Filament Sensor](./filament_runout_sensor.md)
 * [Klipper Expander](https://github.com/VoronDesign/Voron-Hardware/blob/master/Klipper_Expander/Documentation/README.md#setup)
 
 ## Software / Configuration
@@ -23,14 +24,6 @@ Additional documentation for common alternate hardware and other configurations.
 * [Changing OctoPi Hostname](https://github.com/guysoft/OctoPi/wiki/Changing-the-hostname)
 * [Chamber Temperature Sensor](./chamber_temperature_exhaust_fan.md)
 * [Temperature Controlled Exhaust Fan](./chamber_temperature_exhaust_fan.md)
-* [Macros]()
+* [Macros](./macros.md)
 
----
-# Advanced Tuning
-
-This section covers advanced tuning parameters that are typically specific to Klipper, but may have similar equivalents in Marlin or other firmware.
-
-* [Bed Mesh]()
-* [Input Shaper]()
-* [Pressure Advance]()
 

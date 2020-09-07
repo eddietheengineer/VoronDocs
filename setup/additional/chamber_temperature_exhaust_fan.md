@@ -1,6 +1,10 @@
 # Chamber Temperature & Exhaust Fan
 
-While the two functions can be combined, if doing just chamber temperature the process is slightly different so they are documented separately.  The exhaust fan is already configured as part of the default build so no information on installation is providd.
+While the two functions can be combined, if doing just chamber temperature the process is slightly different so they are documented separately.  The exhaust fan is already configured as part of the default build so no information on installation is provied.
+
+### References
+
+https://github.com/alchemyEngine/VoronUsers/tree/master/firmware_configurations/klipper/alch3my
 
 ## Thermistor Wiring
 
@@ -64,7 +68,9 @@ gcode:
 
 Restart Klipper with a `FIRMWARE_RESTART`
 
-With this configuration, the fan will run at 100% anytime the chamber temperature is above 35C.  This is configurable later.
+With this configuration, the fan will run at 100% anytime the chamber temperature is above 35C.  The temperature is configurable later.
+
+_Note: As of Klipper 0.8.0, the fan speed is not dynamically changeable using the temperature\_fan object._
 
 ## OctoPrint Configuration
 
@@ -83,6 +89,8 @@ To display the chamber temperature on the front panel display, additional config
 * If only doing chamber temperature, edit the line `{% set chamber = printer['temperature_fan chamber'] %}` and replace with `{% set chamber = printer['temperature_sensor chamber'] %}`
 * Restart Klipper with a `FIRMWARE_RESTART`
 * If the display does not come on or only partially displays, check the `/tmp/klippy.log` for more information.
+
+**NOTE:** As of June 8, 2020, Klipper changed formatting for the display code.  If looking for the old version, that is in [lcd\_tweaks\_old.cfg](./lcd_tweaks_old.cfg)
 
 ## Exhaust Fan Temperature Control (if chosen)
 
