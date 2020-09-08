@@ -59,7 +59,6 @@ relative_reference_index = ()(x points * y points) - 1) / 2
 
 7x7 mesh = 24, etc
 
-
-
 ## Input Shaper
 
+Imput Shaper is a Klipper-specific software technique for reducing ringing (also known as echoing, ghosting or rippling) in prints.  See the Klipper guide on [configuring Input Shaper](https://github.com/KevinOConnor/klipper/blob/master/docs/Resonance_Compensation.md) for more details and the complete process.
