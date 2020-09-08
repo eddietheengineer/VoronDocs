@@ -96,8 +96,8 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V2 - FLYboard FLYF407ZG](./v2_flyf407zg_wiring.md)
 
 ### Voron Switchwire
-* [VSW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
-* VSW - Einsy Rambo (_coming soon_)
+* [SW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
+* [SW - Einsy Rambo](./sw_einsy_rambo_wiring.md)
 
 ## Additional Items
 
