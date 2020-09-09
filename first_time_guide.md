@@ -24,6 +24,32 @@ The [Voron V2](http://vorondesign.com/voron2.4) is a modified coreXY design with
 
 The [Switchwire](http://vorondesign.com/voron_switchwire) is a Voron take on a classic Mendel (aka "bedflinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the grantry by moving the X motor to the frame.   The stiff 3030/3060 contructed frame is just large enough to cover the entire swing of the bed and allows for a natural enclosure. 
 
+# Extruders and Variants
+
+## Mobius
+
+Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame.  Highly optimized, dual gear, and very effective for Bowden setups.  Driven by a full-size NEMA17 motor.
+
+## Jetpack
+
+Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  It is driven by a compact "pancake" NEMA17 motor.
+
+## Afterburner
+
+Afterburner is not specifically an extruder, but the collective name for the Voron direct-drive interchangeable toolhead system.
+
+## Clockwork
+
+Clockwork is the name given to the original extruder system for Afterburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA17 motor.  The Afterburner term is commonly used to refer to this extruder.
+
+## Pocketwatch
+
+Pocketwatch is the Afterburner Clockwork repackaged for the smaller size needed by the V0 printer.
+
+## Galileo
+
+Galileo is the newest extruder designed to fit on an Afterburner toolhead.  It is based on the [Orbiter](https://www.thingiverse.com/thing:4223085) extruder and incorporates a planetary gear reduction to allow a smaller housing size and even smaller motor to be used in order to reduce weight.
+
 # Building the Printer
 
 ## Printing Parts
