@@ -83,6 +83,7 @@ Depending on bed location, the positional parameters may need to be adjusted to 
 2. Using the OctoPrint or Mainsail controls, move the nozzle to the front left corner of the bed.
 3. If the from left corner of the bed cannot be reached within 3-5mm, the bed location needs to be physically adjusted (if possible). Move the bed on the extrusions or move the extrusions to get the bed location within range.
 	* For V2, Make sure whatever bed position results still allows the nozzle to reach the Z endstop switch (See 'Bed Locating').
+	* If questionable, turn off motors and attempt to move the gantry by hand to see if the front left corner can physically be reached by the nozzle.
 4. Once the nozzle is close to the front left corner of the bed but still on the bed, send an `M114` command to retrieve the current location.
 	* *Note: Due to other tolerances, it is usually not recommended to have the 0,0 exactly on the corner of the bed or build surface. Spec bed sizes are always slightly larger than the defined print volume so print volume loss will be minimal.*
 
