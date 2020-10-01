@@ -5,7 +5,7 @@
 
 Install OctoPrint on the Raspberry Pi by following the instructions found at [OctoPrint Download](https://octoprint.org/download/)
 
-Once installed, ssh to your Raspberry Pi (_Using PuTTY on Windows or the terminal on MacOS) at the address `pi@octopi.local`.  The default password is 'raspberry'.  It is highly recommended to change the default password using the following process:
+Once installed, ssh to your Raspberry Pi (Using PuTTY on Windows or the terminal on MacOS) at the address `pi@octopi.local`.  The default password is 'raspberry'.  It is highly recommended to change the default password using the following process:
 
 * Login to Raspberry Pi
 * `sudo raspi-config` (password may be requested again)
