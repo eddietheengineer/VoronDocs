@@ -8,10 +8,10 @@ When wiring your printer electronics, you will be working with line voltage wiri
 
 ## Tips
 
-* Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on an sometimes hard to identify!
+* Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on and sometimes hard to identify!
 * Safety Mains cables should be properly dimensioned. Use at least 20 AWG for mains connections, even better would be 18 AWG.
-* Buy a quality SSR, do not source one from china or your house will catch on fire (see Official Sourcing Sheet)! Add a 115-125°C thermofuse to your bed heater as an additional safety measure.
-* Dont run your bed above 105°C, this greatly reduces the lifespan of the adhesive holding it onto the build plate
+* Buy a quality SSR, do not source one from China or your house will catch on fire (see Official Sourcing Sheet)! Add a 115-125°C thermofuse to your bed heater as an additional safety measure.
+* Dont run your bed above 105°C, this greatly reduces the lifespan of the adhesive holding it onto the build plate. Additionally it is recommended to run a bead of high temperature RTV sealant around the edge of the heater.
 * Connect ground to your bed! Connect a ground to your frame!
 
 ## Connectors
@@ -20,7 +20,7 @@ The recommended MicroFit 3.0 connectors are specced up to 5A and should be used 
 
 ## Cables
 
-The specced silicone wire has been chosen because: It is very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. You need at least: 8x 24AWG wires in the z chain (2 steppers) 4x 24AWG wires in the y chain (endstops) 7x 24AWG (probe, fans, thermistor) 2x 20AWG in the x chain (heater) - do not downsize these, they are oversized for safety reasons. You may add additional wires to your cable chains as a replacement in chase of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind the adhesive fails over time due to exposure to above room temperature Cables can be hidden in the rails. Optionally print cable covers for the rails.
+The specced silicone wire has been chosen because: It is very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. You need at least: 8x 24AWG wires in the z chain (2 steppers) 4x 24AWG wires in the y chain (endstops) 7x 24AWG (probe, fans, thermistor) 2x 20AWG in the x chain (heater) - do not downsize these, they are oversized for safety reasons. You may add additional wires to your cable chains as a replacement in chase of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind the adhesive fails over time due to exposure to above room temperature. Cables can be hidden in the rails. Optionally print cable covers for the rails.
 
 ## DC Power Supply Wiring
 Many of the latest generation of Voron printers spec the use of two or more independent power supplies.  That can include 24V, 5V, and 12V power supplies sepending on configuration.
@@ -46,7 +46,7 @@ While some extruder motors and inductive probes come with wire leads long enough
 
 ## Wire Terminals
 
-Different controller boards use different terminal types.  The RAMPS boards use Dupont terminals but the SKR boards use JST-XH terminals.  If using an SKR board, a JST-XH connector kit is required with 2-pin, 3-pin, and 4-pin connectors (see the BOM).  Unlike Dupont connectors, JST-XH connectors are keyed and will onyl fit one orientation so pay close attention when inserting pins.
+Different controller boards use different terminal types.  The RAMPS boards use Dupont terminals but the SKR boards use JST-XH terminals.  If using an SKR board, a JST-XH connector kit is required with 2-pin, 3-pin, and 4-pin connectors (see the BOM).  Unlike Dupont connectors, JST-XH connectors are keyed and will only fit one orientation so pay close attention when inserting pins.
 
 For wiring the stepper motors, keep the same wire color sequence that your stepper motors came with and use that same sequence for all stepper motors in the printer.  If the BOM spec motors from StepperOnline are used, the wires should be in the color order as shown in the wiring diagrams.
 
@@ -72,7 +72,7 @@ Below is a circuit diagram with more details.
 
 Endstops can be wired one of two ways: normally closed (NC) or normally open (NO).  For normally closed configurations, the endstop switch allows current to flow through when not triggered.  For normally open configurations, the endstop switch only allows current to flow through whe triggered.
 
-While both of these configurations will work fine in an ideal world, normally closed (NC) configurations are more robust.  If a wire breaks or a terminal becomes disconnected, the printer will think the endstop has triggered and will stop movement before the toolhead crashes into the bed or frame.
+While both of these configurations will work fine in an ideal world, normally closed (NC) configurations are more robust.  If a wire breaks or a terminal becomes disconnected, the printer will think the endstop has triggered and will stop movement before the toolhead crashes into the bed or frame. Note that you should always still observe the homing routine - an intermittent break in an X or Y wire can still result in a crash as the nozzle will drop to where it thinks the Z endstop is and instead hit the bed (not applicable to V0).
 
 Wiring mechanical endstop switches for NC operation is easy as the BOM spec switches have 3 pins exposed.  With a multimeter, probe each combination of the three pins until a pair is found that has continuity (<10 ohms resistance) when the switch is not triggered (normal state), but does not have continuity (>10M ohms resistance) when the switch is triggered (depressed).  Typically the outer two pins are the NC pins, but should be verified prior to installation.
 
