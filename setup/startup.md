@@ -61,7 +61,23 @@ If the toolhead does not move in the expected or correct direction, refer to the
 * [stepper x] = Motor B
 * [stepper y] = Motor A
 
-![](./images/visual_motor_configuration_guide.png)
+### Motor Configuration Guides
+
+#### V0:
+
+![](./images/V0-motor-configuration-guide.png)
+
+#### V1:
+
+![](./images/V1-motor-configuration-guide.png)
+
+#### V2:
+
+![](./images/V2-motor-configuration-guide.png)
+
+#### SW:
+
+![](./images/SW-motor-configuration-guide.png)
 
 **Important:** Do not unplug or re-plug motors from MCUs without powering down the printer.  Damage to MCU may result.
 
@@ -101,7 +117,7 @@ If anything is updated in the printer configuration file, save the file and rest
 ## Z Endstop Pin Location (V1, V2)
 
 * Start by re-running `G28 X Y` to home X and Y.
-* Using the OctoPrint controls, move the nozzle until it is directly over the Z endstop switch.
+* Using the software controls, move the nozzle until it is directly over the Z endstop switch.
 * Send an `M114` command and record the X and Y values.
 * Update the homing routing in the printer configuration file under *[homing_override]* or *[safe\_z\_home]* with those values.
 * Restart Klipper with `FIRMWARE_RESTART`. 
@@ -185,7 +201,7 @@ After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CA
 
 The V1 uses a combination of automated and manual bed leveling.  There are two macros built into Klipper to assist with the function.
 
-First run the `Z_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
+First run the `BED_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
 
 Second run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions defined in the [screws\_tilt\_adjust section] for level, then return how much to adjust the front thumbscrew by.  Re-run the process at least one more time to verify the adjustment.
 
@@ -193,7 +209,7 @@ After both processes have been completed rerun the `Z_ENDSTOP_CALIBRATE` command
 
 ### Quad Gantry Level (V2)
 
-Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL`.  It will probe each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
+Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL` (sometimes referred to in conversation as 'QGL').  It will probe each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
 
 If the process fails due to an “_out of bounds_” error, disable your stepper motors and slowly move your gantry or bed by hand until it is approximately flat. Re-home your printer (`G28`) and then rerun the sequence. You may have to run it more than once.  Make sure that the adjustment value for each stepper motor converges to 0. If it diverges, check to make sure you have your stepper motors wired to the correct stepper driver (check documentation).
 

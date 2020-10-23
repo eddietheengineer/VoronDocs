@@ -26,13 +26,13 @@ The [Switchwire](http://vorondesign.com/voron_switchwire) is a Voron take on a c
 
 # Extruders and Variants
 
-## Mobius
+## Mobius (M4)
 
-Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame.  Highly optimized, dual gear, and very effective for Bowden setups.  Driven by a full-size NEMA17 motor.
+Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame.  Highly optimized, dual gear, and very effective for Bowden setups.  Driven by a full-size or a compact "pancake" NEMA17 motor..
 
 ## Jetpack
 
-Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  It is driven by a compact "pancake" NEMA17 motor.
+Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  Was designed as an intermediary solution to reduce the bowden tube lengths befor the introduction of Afterburner.  It is driven by a compact "pancake" NEMA17 motor.
 
 ## Afterburner
 
