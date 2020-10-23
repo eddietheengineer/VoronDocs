@@ -27,6 +27,8 @@ Run this command for each of the motors:
 
 This command will move each motor UP first and then DOWN 3 times, one second apart.  If the steppers do not move or make strange noises, check the wiring.  Be sure to watch the Z motion to ensure the direction is correct.  If the Z motor(s) do not move in the correct directions, invert the DIR pin on the printer configuration.
 
+#### V2 motor positions
+
 ![](./images/V2-motor-positions.png)
 
 ## Endstop Check
@@ -88,6 +90,14 @@ The print bed location of the V2 is much more adjustable than on any of the othe
 The Z endstop should be located at max Y position.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.  The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame.  If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose.
+
+## Bed locating (V1)
+
+Before the 0,0 point and Z endstop locations are set, the physical locations of the Z endstop and print bed need to be finalized.
+
+The Z endstop should be located at close to max X position.  Home X and Y with `G28 X Y`  and then traverse just Y to locate a Z endstop position at the maximum X travel that will still trigger the endstop.  Lock down the Z endstop at that position.
+
+Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
 
 ## Define 0,0 Point (V0, V1, V2)
 
