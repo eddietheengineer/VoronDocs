@@ -1,6 +1,8 @@
 
 # Software Installation
 
+There are two mainstream options for software: [OctoPrint](#octoprint) and [Mainsail](#mainsail).  Both are supported, however Mainsail was developed specifically for the Voron environment.
+
 ## OctoPrint
 
 Install OctoPrint on the Raspberry Pi by following the instructions found at [OctoPrint Download](https://octoprint.org/download/)
@@ -11,6 +13,34 @@ Once installed, ssh to your Raspberry Pi (Using PuTTY on Windows or the terminal
 * `sudo raspi-config` (password may be requested again)
 * Select "Change User Password" to change the password
 
+### Klipper Octoprint Configuration
+
+_Make sure to only do the testing after Klipper is installed_
+
+The OctoPrint web server needs to be configured to communicate with the Klipper host software. Using a web browser, login to the OctoPrint web page and then configure the following items:
+
+1. Navigate to the Settings tab (the wrench icon at the top of the page)
+2. Under "Serial Connection" in "Additional serial ports" add "/tmp/printer" then click "Save"
+3. Open Settings tab and under "Serial Connection" change the "Serial Port" setting to "/tmp/printer"
+4. In the Settings tab, navigate to the "Behavior" sub-tab and select the "Cancel any ongoing prints but stay connected to the printer" option, then click “Save”
+5. From the main page, under the "Connection" section (at the top left of the page) make sure the "Serial Port" is set to "/tmp/printer" and click "Connect". (If "/tmp/printer" is not an available selection then try reloading the page)
+6. Once connected, navigate to the "Terminal" tab and type "status" (without the quotes) into the command entry box and click "Send". The terminal window will likely report there is an error opening the config file - that means OctoPrint is successfully communicating with Klipper.
+
+
+## Recommended OctoPrint Plugins
+* OctoKlipper
+* Themeify
+* TerminalCommands
+* Bed Level Visualizer
+* Print Time Genius
+
+
+## Mainsail
+
+Mainsail is a lightweight web interface for Klipper and other subsystems.  It does not support plugins but generally doesn't need to.  To install Mainsail, follow the [instructions on the Mainsail page](https://github.com/meteyou/mainsail/blob/master/docs/installation.md).
+
+**Do not install Mainsail onto an OctoPi image!**
+
 ## Klipper
 
 _External References:_
@@ -19,6 +49,8 @@ _External References:_
 * [SKR Installation Instructions](https://3dprintbeginner.com/install-klipper-on-skr-1-3-speed-up-your-prints/)
 
 ### Installation
+
+_If installing Mainsail and using that process, skip just the installation step as it will already be covered._
 
 Once at the command line of the Raspberry Pi, run the following commands to download and install the latest version of Klipper:
 
@@ -36,25 +68,15 @@ git clone https://github.com/KevinOConnor/klipper
 * [SKR mini e3 V2.0](./miniE3_v20_klipper.md)
 * [FLY FLYF407ZG](./flyf407zg_klipper.md)
 
-### Klipper Octoprint Configuration
-
-The OctoPrint web server needs to be configured to communicate with the Klipper host software. Using a web browser, login to the OctoPrint web page and then configure the following items:
-
-1. Navigate to the Settings tab (the wrench icon at the top of the page)
-2. Under "Serial Connection" in "Additional serial ports" add "/tmp/printer" then click "Save"
-3. Open Settings tab and under "Serial Connection" change the "Serial Port" setting to "/tmp/printer"
-4. In the Settings tab, navigate to the "Behavior" sub-tab and select the "Cancel any ongoing prints but stay connected to the printer" option, then click “Save”
-5. From the main page, under the "Connection" section (at the top left of the page) make sure the "Serial Port" is set to "/tmp/printer" and click "Connect". (If "/tmp/printer" is not an available selection then try reloading the page)
-6. Once connected, navigate to the "Terminal" tab and type "status" (without the quotes) into the command entry box and click "Send". The terminal window will likely report there is an error opening the config file - that means OctoPrint is successfully communicating with Klipper.
 
 ### Klipper Troubleshooting and Common Errors
 
 #### Retrieve Log File
 
 The Klippy log file (/tmp/klippy.log) contains debugging information.
-M112 command in the OctoPrint terminal window immediately after the undesirable event.
+Execute the `M112` command in the OctoPrint terminal window immediately after the undesirable event.
 
-There is a logextract.py script that may be useful when analyzing a micro-controller shutdown or similar problem.
+There is also a logextract.py script that may be useful when analyzing a micro-controller shutdown or similar problem.  To use it follow this procedure:
 
 ```
 mkdir work_directory
@@ -77,18 +99,6 @@ ADC stands for “Analog to Digital Converter” and is what is used to convert 
 
 Once the underlying issue is corrected, use the `FIRMWARE_RESTART` command to reset the firmware, reload the config, and restart the host software. Check MCU IDs match your printer.cfg.  _Make sure you get the paths right!_
 
-
-## Recommended OctoPrint Plugins
-* OctoKlipper
-* Themeify
-* TerminalCommands
-* Bed Level Visualizer
-* Print Time Genius
-
-
-## Mainsail
-
-___Coming Soon___
 
 ---
 ## Next: [Software Configuration](../configuration.md)
