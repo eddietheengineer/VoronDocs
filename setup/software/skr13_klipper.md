@@ -63,3 +63,5 @@ Replace the microSD card(s) into the SKR(s).  If more than one, it does not matt
 Turn on the power supply to power on the SKR board(s).  If named properly, the SKR will automatically update with the Klipper firmware.
 
 **Important:** If the SKR(s) are not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the SKR will automatically shut down.
+
+### Back to [Software Installation](./README.md#klipper-octoprint-configuration)

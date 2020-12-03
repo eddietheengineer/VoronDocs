@@ -1,6 +1,6 @@
 # Initial Startup Checks
 
-This guide is written as OctoPrint specific and will be updated over time to also acommodate Mainsail.
+_This guide is written as OctoPrint specific and will be updated over time to also acommodate Mainsail._
 
 Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint web UI, in the box for entering commands directly.
 
@@ -9,21 +9,6 @@ Any time commands are requested to be issued, those will happen in the 'Terminal
 Any time movements need to be made, those will happen in the 'Control' tab of the Octoprint web UI. The numbers underneath X/Y and Z will change the step-size accordingly.
 
 ![](./images/Octoprint_Controls.png)
-
-## Endstop Check
-
-Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
-
-```
-Send: QUERY_ENDSTOPS
-Recv: x:open y:open z:open
-```
-
-If any of them say "triggered" instead of "open", double-check to make sure none of them are pressed.  Next, manually press the X endstop switch, send the `QUERY_ENDSTOPS` command again, and make sure that the X enstop says "triggered and the Y and Z endstops stay open.  Repeat with the Y and Z endstops.
-
-If it is found that one of the endstops has inverted login (i.e. it reads as "open" when it is pressed and "triggered" when not pressed), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. For example, if the X endstop was inverted, add a ! in front of the pin number as follows:
-
-`endstop_pin: P1.28` -> `endstop_pin: !P1.28`
 
 ## Stepper Motor Check
 
@@ -42,7 +27,24 @@ Run this command for each of the motors:
 
 This command will move each motor UP first and then DOWN 3 times, one second apart.  If the steppers do not move or make strange noises, check the wiring.  Be sure to watch the Z motion to ensure the direction is correct.  If the Z motor(s) do not move in the correct directions, invert the DIR pin on the printer configuration.
 
+#### V2 motor positions
+
 ![](./images/V2-motor-positions.png)
+
+## Endstop Check
+
+Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
+
+```
+Send: QUERY_ENDSTOPS
+Recv: x:open y:open z:open
+```
+
+If any of them say "triggered" instead of "open", double-check to make sure none of them are pressed.  Next, manually press the X endstop switch, send the `QUERY_ENDSTOPS` command again, and make sure that the X enstop says "triggered and the Y and Z endstops stay open.  Repeat with the Y and Z endstops.
+
+If it is found that one of the endstops has inverted login (i.e. it reads as "open" when it is pressed and "triggered" when not pressed), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. For example, if the X endstop was inverted, add a ! in front of the pin number as follows:
+
+`endstop_pin: P1.28` -> `endstop_pin: !P1.28`
 
 ## XY Homing Check
 
@@ -61,7 +63,23 @@ If the toolhead does not move in the expected or correct direction, refer to the
 * [stepper x] = Motor B
 * [stepper y] = Motor A
 
-![](./images/visual_motor_configuration_guide.png)
+### Motor Configuration Guides
+
+#### V0:
+
+![](./images/V0-motor-configuration-guide.png)
+
+#### V1:
+
+![](./images/V1-motor-configuration-guide.png)
+
+#### V2:
+
+![](./images/V2-motor-configuration-guide.png)
+
+#### SW:
+
+![](./images/SW-motor-configuration-guide.png)
 
 **Important:** Do not unplug or re-plug motors from MCUs without powering down the printer.  Damage to MCU may result.
 
@@ -71,26 +89,62 @@ The print bed location of the V2 is much more adjustable than on any of the othe
 
 The Z endstop should be located at max Y position.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
 
-Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 3mm from the aluminum base plate.  The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame.  If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose.
+Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.  The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame.  If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose.
 
-## Define 0,0 Point
+## Bed locating (V1)
 
-The homing position is at maximum travel, not 0,0. So the 0,0 point needs to be set.  Start by re-running `G28 X Y` to home X and Y.  Using the OctoPrint controls, move the nozzle to the front left corner of the bed.  If it cannot be reached, move the bed on the extrusions but make sure whatever bed position results still allows the nozzle to reach the Z endstop switch.  Once the nozzle can get close to the front left corner of the bed, send an `M114` command.  If X and Y are not ~0-5mm, update position_max and position_endstop for both [stepper\_x] and [stepper\_y]:
+Before the 0,0 point and Z endstop locations are set, the physical locations of the Z endstop and print bed need to be finalized.
 
-* For X: New = Current - Get Position X Result
-* For Y: New = Current - Get Position Y Result
+The Z endstop should be located at close to max X position.  Home X and Y with `G28 X Y`  and then traverse just Y to locate a Z endstop position at the maximum X travel that will still trigger the endstop.  Lock down the Z endstop at that position.
+
+Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
+
+## Define 0,0 Point (V0, V1, V2)
+
+The homing position is not at the typical location of 0,0 but at the maximum travel location.  The actual numbers vary by printer build size.
+
+Depending on bed location, the positional parameters may need to be adjusted to re-locate the 0,0 point.
+
+1. Start by re-running `G28 X Y` to home X and Y.  After this, the nozzle will be at the maximum X,Y as defined by *position_max* under *[stepper_x]* and *[stepper_y]*. 
+2. Using the OctoPrint or Mainsail controls, move the nozzle to the front left corner of the bed.
+3. If the from left corner of the bed cannot be reached within 3-5mm, the bed location needs to be physically adjusted (if possible). Move the bed on the extrusions or move the extrusions to get the bed location within range.
+	* For V2, Make sure whatever bed position results still allows the nozzle to reach the Z endstop switch (See 'Bed Locating').
+	* If questionable, turn off motors and attempt to move the gantry by hand to see if the front left corner can physically be reached by the nozzle.
+4. Once the nozzle is close to the front left corner of the bed but still on the bed, send an `M114` command to retrieve the current location.
+	* *Note: Due to other tolerances, it is usually not recommended to have the 0,0 exactly on the corner of the bed or build surface. Spec bed sizes are always slightly larger than the defined print volume so print volume loss will be minimal.*
+
+If X and Y offsets are less than 1mm and 0,0 is over the bed, nothing needs to be changed.
+
+If X and Y offsets are within 5mm or 0,0 is past the bed, the *postition_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* for both *[stepper_x]* and *[stepper_y]* as follows:
+
+* For X: New = Current - Get Position X (M114) Result
+* For Y: New = Current - Get Position Y (M114) Result
+
+*If the Z endstop pin location has been previously defined, be sure to re-follow the process to set the Z endstop pin location (if applicable).*
 
 If anything is updated in the printer configuration file, save the file and restart Klipper using `FIRMWARE_RESTART`.
 
-## Z Endstop Pin Definition (V1, V2)
+## Z Endstop Pin Location (V1, V2)
 
-Start by re-running `G28 X Y` to home X and Y.  Using the OctoPrint controls, move the nozzle until it is directly over the Z endstop switch.  Send an `M114` command and record the X and Y values.  Update the homeing routing in the printer configuration file under [homing\_override] or [safe\_z\_home] with those values then restart Klipper with `FIRMWARE_RESTART`. Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  Once the the homing rocess is completed, if the toolhead is not over the center of the bed, check the printer configuration file and uncomment the section in [homing\_override] appropriate for the bed size.
+* Start by re-running `G28 X Y` to home X and Y.
+* Using the software controls, move the nozzle until it is directly over the Z endstop switch.
+* Send an `M114` command and record the X and Y values.
+* Update the homing routing in the printer configuration file under *[homing_override]* or *[safe\_z\_home]* with those values.
+* Restart Klipper with `FIRMWARE_RESTART`. 
+* Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  
+* Once the the homing process is completed, if the toolhead is not over the center of the bed, check the printer configuration file and uncomment the section in *[homing_override]* appropriate for the bed size.
 
 ## Inductive Probe Check (V1, V2, Switchwire)
 
-With the probe in the center of the bed, reconfirm that the probe is working correctly.  When it is far from the bed, `QUERY_PROBE` should return “open”. When a metal object is close to the probe, `QUERY_PROBE` should return “triggered”. Slowly reduce your Z height and run `QUERY_PROBE` each time until `QUERY_PROBE` returns “triggered” - make sure the nozzle is not touching the print surface (and has clearance). If the signal is inverted, add a “!” In front of the pin definition (ie, pin: ! z:P1.24).
+### Probe Testing
 
-### Probe Accuracy
+With the toolhead in the center of the bed, reconfirm that the probe is working correctly.
+
+When it is far from the bed, `QUERY_PROBE` should return “open”. When a metal object is close to the probe, `QUERY_PROBE` should return “triggered”. If the signal is inverted, add a “!” In front of the pin definition (ie, pin: ! z:P1.24).
+
+Slowly reduce your Z height and run `QUERY_PROBE` each time until `QUERY_PROBE` returns “triggered” - make sure the nozzle is not touching the print surface (and has clearance). 
+
+### Probe Accuracy Check
 
 With the bed and hotend cold (for now), move the probe to the center of the bed and run `PROBE_ACCURACY`. It will probe the bed 10 times in a row and output a standard deviation value at the end. Make sure that the sensed distance is not trending (gradually decreasing or increasing over the 10 probes) and that the standard deviation is less than 0.003mm.
 
@@ -157,7 +211,7 @@ After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CA
 
 The V1 uses a combination of automated and manual bed leveling.  There are two macros built into Klipper to assist with the function.
 
-First run the `Z_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
+First run the `BED_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
 
 Second run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions defined in the [screws\_tilt\_adjust section] for level, then return how much to adjust the front thumbscrew by.  Re-run the process at least one more time to verify the adjustment.
 
@@ -165,7 +219,7 @@ After both processes have been completed rerun the `Z_ENDSTOP_CALIBRATE` command
 
 ### Quad Gantry Level (V2)
 
-Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL`.  It will probe each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
+Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL` (sometimes referred to in conversation as 'QGL').  It will probe each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
 
 If the process fails due to an “_out of bounds_” error, disable your stepper motors and slowly move your gantry or bed by hand until it is approximately flat. Re-home your printer (`G28`) and then rerun the sequence. You may have to run it more than once.  Make sure that the adjustment value for each stepper motor converges to 0. If it diverges, check to make sure you have your stepper motors wired to the correct stepper driver (check documentation).
 
@@ -197,6 +251,7 @@ Preparation
 * **V2:** Run a `G28`, and then a `QUAD_GANTRY_LEVEL`, and then another `G28`.
 * **All others:**  Run a `G28`.
 * Move the nozzle to the center of the bed if it is not already.
+* Clear any stored bed meshes with `BED_MESH_CLEAR`
 
 Run `Z_ENDSTOP_CALIBRATE`
 
@@ -204,6 +259,8 @@ Slowly move the nozzle toward the bed by using `TESTZ Z=-1`
 Until the nozzle is relatively close to the bed, and then stepping down with `TESTZ Z=-0.1`
 Until the nozzle touches a piece of paper on top of the build plate. If you go far down, you can move the nozzle back up with: `TESTZ Z=0.1`
 Once you are satisfied with the nozzle height, run `ACCEPT` and then `SAVE_CONFIG`.
+
+**Important:** Klipper assumes that this process is being done cold.  If being performed hot, do an additional `TESTZ Z=-0.1` before accepting.
 
 If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE`, `ACCEPT`, and then `SAVE_CONFIG`. This will redefine the 0 bed height so you will be able to get closer.
 
@@ -218,6 +275,7 @@ The Z offset can be adjusted during a print using the Tune menu on the display, 
 If you're running your printer headless, the Z height can still be adjusted on-the-fly using the terminal interface.
 
 1) (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
+
 ```
 [gcode_macro ZUP]
 gcode:
@@ -234,7 +292,7 @@ gcode:
 #### Saving your results
 Update your `position_endstop` in your config file:
 
-New Position = Old Position - Tune Adjustment _(e.g. New Position = Old Position - (-0.050) = Old Position + 0.050)_
+New Position = Old Position - Tune Adjustment *(e.g. New Position = Old Position - (-0.050) = Old Position + 0.050)*
 
 ### Advanced Process
 
@@ -242,11 +300,16 @@ If there are issues or repeat setting is not working as expected, follow the mor
 
 ## Extruder Calibration (e-steps)
 
-Before the first print,make sure that the extruder extrudes the correct amount of material. With the hotend at temperature, make a mark between your roll of filament and your extruder, 120mm away from the entrance to the extruder. In Octoprint, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time), then measure from the entrance of your extruder to the mark you made previously. In a perfect world, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be. Take the value in the configuration file and update it using the following:
+Before the first print,make sure that the extruder extrudes the correct amount of material.
 
-New Config Value = Old Config Value * (Actual Extruded Amount/Target Extruded Amount)
+* With the hotend at temperature, make a mark between your roll of filament and your extruder, 120mm away from the entrance to the extruder.
+* In Octoprint / Mailsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
+* Measure from the entrance of your extruder to the mark you made previously. 
+	* *In a perfect world, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
+* Take the value in the configuration file and update it using the following:
+	* New Config Value = Old Config Value * (Actual Extruded Amount/Target Extruded Amount)
 
-Note that a higher configuration value means that less filament is being extruded.
+*Note: a higher configuration value means that less filament is being extruded.*
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
 

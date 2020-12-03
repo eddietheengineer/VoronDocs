@@ -136,7 +136,7 @@ IGUS bushings exhibit a phenomenon called stiction, therefore in small movements
 
 ### Using the number of washers shown in the manual, things are too tight or too loose
 
-Depending on where you sourced your washers they may have different tolerances. The VORON is designed around 1mm thick shim washers, you can buy either 0.5mm or 1mm thick ones and adjust accordingly. Standard washers are sized as follows: 1mm +0.2mm -0.00mm usually.
+Depending on where you sourced your washers they may have different tolerances. The VORON is designed around 1mm thick shim washers, you can buy either 0.5mm or 1mm thick ones and adjust accordingly. Standard washers are typically sized as follows: 1mm (+0.2mm/-0.00mm).
 
 ### I cannot find MIC6 Aluminum anywhere, is there something else I can use?
 
@@ -198,7 +198,7 @@ The CoreXY configuration does not support sensorless homing since both motors ar
 * They would not be recommended for the Z and E motors. These are already geared which give them better resolution. Going to 0.9 degree motors would mean they would then need twice as many steps to go the same distance as a 1.8 degree motor. This combined with microstepping results in more cpu load on your boards and would then start to limit how fast you can drive these.
 * They may have some beneficial affect on the XY axis (AB motors) which don't have the gearing that the Z and E assemblies have. Don't expect miracles though, filament variance is another factor that starts to be an issue as well when attempting small detail.
 	* While 0.9 motor can be a bit quieter, from all accounts in an enclosed Voron the fans are likely to make most of the noise. So any noise benefit would be negligible(edited)
-	* Using the BOM spec ramps and klipper with 0.9deg steppers will limit your theoretical travel speeds greatly, just running 1/16 microstepping with 0.9deg XY motors and pressure advance with a 1.8deg stepper on the Extruder is enough to easily overwhelm the board.
+	* Using the BOM spec ramps and klipper with 0.9deg steppers will limit your theoretical travel speeds greatly, just running 1/16 microstepping with 0.9deg XY motors and pressure advance with a 1.8deg stepper on the extruder is enough to easily overwhelm the board.
 
 
 
@@ -228,9 +228,13 @@ The hammer nuts are intended to be used with the panel clips to allow easier rem
 
 The inductive probe in the toolhead is somewhat heat sensitive.  The kapton tape is helpful to be applied to the inductve probe to protect it from radiant hot end heat.
 
+### Why do I need bowden tube if using direct drive?
+
+The Afterburner toolhead needs a short (~30mm) piece of bowden tube to feed from the clockwork output into the hot end.  Also the direct drive setup commonly uses a reverse bowden to feed filament into the extruder.
+
 ### What lube should I use?
 
-The currently recommended lube for the linear rails is Mobilux EP2.  Either Super Lube or EP2 is recommended for the extruder gears.
+The currently recommended lube for the linear rails is Mobilux EP1 or EP2, or the NLGI equivalents.  Either Super Lube or EP1/2 is recommended for the extruder gears.
 
 ### What about the Clever3d PEI coated plate? It seems cool, and not having to apply the PEI sheet myself would be nice..
 

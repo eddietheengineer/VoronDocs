@@ -56,3 +56,5 @@ Replace the microSD card(s) into the FLY.  If more than one, it does not matter 
 Turn on the power supply to power on the FLY board.  If named properly, the FLY will automatically update with the Klipper firmware.
 
 **Important:** If the FLY not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the FLY will automatically shut down.
+
+### Back to [Software Installation](./README.md#klipper-octoprint-configuration)

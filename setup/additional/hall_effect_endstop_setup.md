@@ -35,7 +35,7 @@ _The hall effect sensors are sensitive to polarity so the magnets must be instal
 * Verify the magnet poles and install.
 	* Take a single magnet and slowly move it close to the hall effect board's Y sensor.
 	* If the light does not come on with the magnet 5-10mm away, flip the magnet over and try again.
-	* Once the pole has been identified install the magnet into the Z joint. ![](./images/y_magnet_location.jpg)
+	* Once the pole has been identified install the magnet (in exactly the same oriantation!) into the Z joint. ![](./images/y_magnet_location.jpg)
 	* Repeat for X axis, magnet is installed into the X carriage over top of a SHCS. ![](./images/x_magnet_location.jpg)
 * For each axis, move the gantry or carriage back and forth watching the LED for the trigger point.  Adjust the potentiometer to set the gap for when the endstop is triggered.  The gap should not be any smaller than 1-2mm.
 

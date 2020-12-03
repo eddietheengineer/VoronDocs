@@ -10,7 +10,7 @@ For the Bill of Materials / Sourcing Guide, please to the the [main website](htt
 
 To assemble the hardware, please go to the [assembly guides](./assembly) for information.  There is an assembly guide for each printer model.
 
-Once the hardware assembly is complete, please go to the [setup guide](./setup/README.md) to go from assembled hardware to a working printer.
+Once the hardware assembly is complete, please go to the [setup guide](./setup/README.md) to go from assembled hardware to a working printer. For setting up items above and beyond the basic setup, check the [additional guides](./setup/additional/README.md)
 
 For continued tuning, or if help is needed after the initial setup, check out the [support section](./support/README.md)
 
