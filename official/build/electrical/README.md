@@ -3,7 +3,7 @@
 ## Safety Note
 When wiring your printer electronics, you will be working with line voltage wiring (120V / 220V AC). Always double check to make sure your printer is unplugged and the capacitors in the power supplies have discharged before touching any wire or terminal.
 
-**The recommendations made in here are typically out of an abundance of caution to prevent fires.**
+***The recommendations made in here are typically out of an abundance of caution to prevent fires.***
 
 ## Risk of Damage
 **Never plug or unplug any device while the printer is powered.** In addition to being a safety hazard, it is very easy to damage electronic components.  In particular the stepper drivers can be easily damaged by connecting or disconnecting stepper motors while powered.
@@ -28,7 +28,13 @@ When assembling Microfit connectors, the male pins are inserted into the female 
 
 ## Cables
 
-The spec'ed silicone wire has been chosen because: It is very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. You need at least: 8x 24AWG wires in the z chain (2 steppers) 4x 24AWG wires in the y chain (endstops) 7x 24AWG (probe, fans, thermistor) 2x 20AWG in the x chain (heater) - do not downsize these, they are oversized for safety reasons. You may add additional wires to your cable chains as a replacement in chase of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind the adhesive fails over time due to exposure to above room temperature. Cables can be hidden in the rails. Optionally print cable covers for the rails.
+The spec'ed silicone wire has been chosen because: It is very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
+
+See the cable lengths and count section for specific counts. Do not downsize the hot end heater wires, they are oversized for safety reasons. 
+
+You may add additional wires to your cable chains as a replacement in chase of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! 
+
+Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind the adhesive fails over time due to exposure to above room temperature. Cables can be hidden in the rails. Optionally print cable covers for the rails.
 
 ## DC Power Supply Wiring
 Many of the latest generation of Voron printers spec the use of two or more independent power supplies.  That can include 24V, 5V, and 12V power supplies sepending on configuration.
@@ -43,16 +49,25 @@ Instead of multiple power supplies, the V0 uses a DC-DC converter to generate a 
 
 ### Larger Printers (V1, V2, Switchwire)
 
-Please see the associated assembly guides for power supply configurtions.
+Please see the associated assembly guides for power supply configurations.
 
 ---
 # Wiring Configuration / Setup
 
-## Gantry Routing
+### Wire counts / lengths
+
+The following are guides for each printer model for planning of wire counts and lengths.  As always, these are recommendations and adding allowances is always a good idea.
+
+- [V0 Gantry Wires](./V0_gantry_wires.md)
+- [V1 Gantry Wires](./V1_gantry_wires.md)
+- [V2 Gantry Wires](./V2_gantry_wires.md)
+- [SW Gantry Wires](./SW_gantry_wires.md)
+
+### Gantry Routing
 
 While some extruder motors and inductive probes come with wire leads long enough to reach part or all of the way down the cable chain, resist the urge to use them.  The wires typically found in them are not rated for the constant bending encountered in the cable chains and may break much sooner than desired.  Terminate all connections to silicone or PTFE wire before entering the cable chain.
 
-## Wire Terminals
+### Wire Terminals
 
 Different controller boards use different terminal types.  The RAMPS boards use Dupont terminals but the SKR boards use JST-XH terminals.  If using an SKR board, a JST-XH connector kit is required with 2-pin, 3-pin, and 4-pin connectors (see the BOM).  Unlike Dupont connectors, JST-XH connectors are keyed and will only fit one orientation so pay close attention when inserting pins.
 
@@ -62,11 +77,15 @@ If the purchased steppers do not match the color order in the documentation, the
 
 **Important:** If the motors are found later on to be going the wrong direction, repinning the connectors is _not_ required.  The direction can be inverted in the configuration later.
 
-## Inductive Probe Wiring (V1, V2, Switchwire)
+### Inductive Probe Wiring (V1, V2, Switchwire)
 
-The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Z Tilt Adjust or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
+The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
 
 If not closely following the BOM spec, ensure that the inductive probe purchased is a normally closed (NC) version rather than normally open (NO).  The configuration cannot be changed as that is built specifically from the factory.  A normally open (NO) probe may cause crashes if a wire breaks.
+
+### X/Y Endstop Wiring (V2)
+
+The X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops. 
 
 ### BAT85 Diode
 
@@ -78,11 +97,11 @@ Below is a circuit diagram with more details.
 
 ![](./images/inductive_probe_diode_diagram.png)
 
-## Endstop Wiring
+### Endstop Wiring
 
 Endstops can be wired one of two ways: normally closed (NC) or normally open (NO).  For normally closed configurations, the endstop switch allows current to flow through when not triggered.  For normally open configurations, the endstop switch only allows current to flow through whe triggered.
 
-While both of these configurations will work fine in an ideal world, normally closed (NC) configurations are more robust.  If a wire breaks or a terminal becomes disconnected, the printer will think the endstop has triggered and will stop movement before the toolhead crashes into the bed or frame. Note that you should always still observe the homing routine - an intermittent break in an X or Y wire can still result in a crash as the nozzle will drop to where it thinks the Z endstop is and instead hit the bed (not applicable to V0).
+While both of these configurations will work fine in an ideal world, normally closed (NC) configurations are more robust.  If a wire breaks or a terminal becomes disconnected, the printer will think the endstop has triggered and will stop movement before the toolhead crashes into the bed or frame. Note that you should always still observe the homing routine - an intermittent break in an X or Y wire can still result in a crash as the nozzle will drop to where it thinks the Z endstop is and instead hit the bed (not applicable to V0 or Switchwire).
 
 Wiring mechanical endstop switches for NC operation is easy as the BOM spec switches have 3 pins exposed.  With a multimeter, probe each combination of the three pins until a pair is found that has continuity (<10 ohms resistance) when the switch is not triggered (normal state), but does not have continuity (>10M ohms resistance) when the switch is triggered (depressed).  Typically the outer two pins are the NC pins, but should be verified prior to installation.
 

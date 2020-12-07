@@ -294,9 +294,8 @@ Update your `position_endstop` in your config file:
 
 New Position = Old Position - Tune Adjustment *(e.g. New Position = Old Position - (-0.050) = Old Position + 0.050)*
 
-### Advanced Process
-
-If there are issues or repeat setting is not working as expected, follow the more advanced [Z endstop configuration](../support/z_endstop_configuration.md) guide.
+### Related Community Documentation
+> [Z Endstop Configuration](../../../community/howto/z_endstop_configuration/README.md)
 
 ## Extruder Calibration (e-steps)
 
