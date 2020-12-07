@@ -79,6 +79,6 @@
 
 ---
 
-### Next: [Electrical Wiring](../electrical/readme.md)
+### Next: [Electrical Wiring](../electrical/README.md)
 
  

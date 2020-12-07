@@ -1,12 +1,12 @@
 # Sourcing / Buying FAQ
 
-These are common questions for builders looking to gather all of the components for their upcomgin build.
+These are common questions for builders looking to gather all of the components for their upcoming build.
 
 ## Filament / Printing
 
 ### How much filament do I need for all printed parts?
 
-Assuming no failed to reprinted parts, the following guidelines apply:
+Assuming no failed or reprinted parts, the following guidelines apply:
 
 - V0:
 - V1:

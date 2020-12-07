@@ -60,4 +60,4 @@ Galileo is the newest extruder designed to fit on an Afterburner toolhead.  It i
 
 ---
 
-Next: [Sourcing Information](../sourcing.md)
+### Next: [Sourcing Information](../sourcing.md)
