@@ -10,5 +10,7 @@ Once you are printing (with your printer fully assembled), take a quick video, u
 
 # Next Steps
 
-Done with your cereal?  The printer's not not done yet!  There is still lots of adjusting to do so the printer can turn out high speed perfection.  Head over to the [Printer Tuning](../support/README.md#printer-tuning) section of the Support Guides and dial it in.
+Done with your cereal?  The printer's not not done yet!  There is still lots of adjusting to do so the printer can turn out high speed perfection.
+
+Head over to the [Tuning Guides](../../tuning/README.md) and dial it in.
 

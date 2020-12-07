@@ -3,6 +3,8 @@
 ## Safety Note
 When wiring your printer electronics, you will be working with line voltage wiring (120V / 220V AC). Always double check to make sure your printer is unplugged and the capacitors in the power supplies have discharged before touching any wire or terminal.
 
+**The recommendations made in here are typically out of an abundance of caution to prevent fires.**
+
 ## Risk of Damage
 **Never plug or unplug any device while the printer is powered.** In addition to being a safety hazard, it is very easy to damage electronic components.  In particular the stepper drivers can be easily damaged by connecting or disconnecting stepper motors while powered.
 
@@ -55,6 +57,8 @@ While some extruder motors and inductive probes come with wire leads long enough
 Different controller boards use different terminal types.  The RAMPS boards use Dupont terminals but the SKR boards use JST-XH terminals.  If using an SKR board, a JST-XH connector kit is required with 2-pin, 3-pin, and 4-pin connectors (see the BOM).  Unlike Dupont connectors, JST-XH connectors are keyed and will only fit one orientation so pay close attention when inserting pins.
 
 For wiring the stepper motors, keep the same wire color sequence that your stepper motors came with and use that same sequence for all stepper motors in the printer.  If the BOM spec motors from StepperOnline are used, the wires should be in the color order as shown in the wiring diagrams.
+
+If the purchased steppers do not match the color order in the documentation, there is no need to rewire just to change colors.  There is not a "standard" wire color order for these parts. If the builder decides to reterminate to change connector types or whatever, be sure to use the same order as before. The spec motors also come with a datasheet or card so you can double check the work. One can also use a multimeter to find wire pairs in the motor by measuring continuity between leads. Each lead should have continuity to the other lead in its pair.
 
 **Important:** If the motors are found later on to be going the wrong direction, repinning the connectors is _not_ required.  The direction can be inverted in the configuration later.
 

@@ -13,8 +13,12 @@ If you need help and are not there already, please join the [Discord](https://di
 
 ## [Electrical Wiring](./electrical/README.md)
 
-## [Software Installation and Configuration](./software/README.md)
+## [Software Installation](./software/README.md)
+
+## [Software Configuration](./software/configuration.md)
 
 ## [First Printer Startup](./startup/README.md)
 
-## [Slicer Setup and First Print](./slicer/README.md)
+## [Slicer Setup](./slicer/README.md)
+
+## [First Print](./slicer/first_print.md)

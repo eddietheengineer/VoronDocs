@@ -39,4 +39,4 @@ For maximum quality and accuracy, preheating the printer is recommended.  This c
 Every printer is going to have a start sequence that typically involves homing and/or leveling to prepare the printer.  This is in addition to heating the nozzle and bed and doing other tasks.  Look at the PRINT_START macro in the printer.cfg for the standard process.  For additional information or ideas, check the [macros page](./additional/macros.md).
 
 ---
-## Next: [First Print](./README.md#first-print)
+### Next: [First Print](./first_print.md)

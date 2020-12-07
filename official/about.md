@@ -4,6 +4,10 @@ All Voron printers are built using CoreXY or CoreXZ configurations.  No Cartesia
 
 ## Voron Does
 
+### Frames
+
+All V1 and V2 frames are constructed with 2020 aluminum extrusions.  The V0 is built with 1515 Makerbeam XL and the Switchwire is constructed with 6030 and 3030 extrusions.  The 2020 for the V1 and V2 is considered sufficient for the application.  3D printers are not CNC machines and the strength to weight / stiffness ration is more than sufficient for #D printering where no side loads ot cutting loads are imparted.
+
 ### Motion Control - Klipper
 
 All Voron printers are by default specified too use [Klipper](https://www.klipper3d.org/Overview.html) as the underlying control system.  This allows for high speed processing while still allowing inexpensive controllers.
@@ -39,6 +43,10 @@ This machine is intended such that it can be built with "garden tools", chamber 
 
 Voron does not currently support dual extrusion, dual hot ends, tool changers, or other such things (officially).  There are individual users doing independent development testing, but nothing is officially supported.
 
+### Large Scale
+
+Building any CoreXY printer (including Voron) larger that 350^2 will be more expensive, with a reduction in print quality, and print slower than the supported sizes. The Voron was also never designed to support those sizes so builders will likely run into structural issues. The VORON Design team does not endorse or support printers larger than 350 x 350 in the XY and 500 in the Z due to internal testing.
+
 ---
 
-Next: [Choosing the Printer / Extruder](./hardware/README.md)
+### Next: [Choosing the Printer / Extruder](./hardware/README.md)

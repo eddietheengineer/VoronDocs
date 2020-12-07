@@ -101,4 +101,4 @@ Once the underlying issue is corrected, use the `FIRMWARE_RESTART` command to re
 
 
 ---
-## Next: [Software Configuration](./configuration.md)
+### Next: [Software Configuration](./configuration.md)

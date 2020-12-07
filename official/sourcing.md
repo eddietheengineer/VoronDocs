@@ -38,13 +38,25 @@ These are the recommended settings.
 
 For every printer on the main webpage, There is a method to generate a bill of materials (BOM).  That is the definitive guide for what parts are required for that printer.  The BOM also references the sourcing guide.  The sourcing guide is a list of recommended vendors for the various components that are required to build a printer.  While there may be quantities listed on the sourcing guide, those numbers are not guaranteed to be accurate and we strongly recommend that people reference the BOM for specific quantities.
 
+*When purchasing small items, it is recommended to buy extras (round up). Having a few extra screws or connectors around may actually help you later.*
+
 _Note:_ The generated BOM part numbers for Misumi extrusions are the exact part numbers.  Enter them into Misumi's website and they will return exactly what needs to be ordered, down to drilling holes and tapping ends.
 
 There are a growing number of suppliers that are assembling kits to build Voron printers.  Outside of the sourcing guide, Voron does not implicitly endorse any specific vendor of Voron kits.
 
+### Parts Selection / Alternates
+
+When choosing extrusions, V-slot rail is discouraged.  This is due to the use of the MGN9 linear rail as the V-slot and width of the rail are very close and cause misalignment.  Vendors of extrusions other than Misumi are genreally fine but verification of the extrusion profile is highly recommended.
+
+If trying to keep costs down, the screen on any printer is entirely optional.  Many builders soley use the web interface.
+
+Builders are welcome to make substitutions as they see fit but this printer is not a race to be as cheap as possible. It is designed to compete with many other high-end printers will still being affordable. Substituting parts may also have other unintended side effects and cause compatibility issues. Please feel free to ask for advice before any substitutions are made.
+
+More sourcing information can be found in the [sourcing FAQ](./sourcing_faq.md)
+
 ## Recommended Tools
 
-* Set of metric hex wrenches ("keys") from at least 1.5 - 5
+* Set of metric hex wrenches ("keys") from at least 1.5 - 5. (Wiha, Wera , or Bondhus are preferred)
 * Screwdrivers
 * Crimpers
 	* Molex
@@ -53,3 +65,6 @@ There are a growing number of suppliers that are assembling kits to build Voron 
 * Diagonal wire cutters, small
 * Wire strippers from 16 gauge to 28 gauge
 
+---
+
+Next: [The Build](./build/README.md)
