@@ -18,7 +18,7 @@
 * Plug Hot End heater in to HE0 (P2.7)
 * Plug Hot End Fan + Controller Fan in to HE1 (P2.4)
 * Plug Bed Heater thermistor in to TB (P0.23)
-* Plug SSR Control for Heated Bed in to Servos (P2.0)
+* Plug SSR Control for Heated Bed in to Neopixel (P1.24)
 * Plug Part Cooling Fan in to Fan (P2.3)
 * Connect X end stop to X-STOP connector (P1.28)
 * Connect Y end stop to Y-STOP connector (P1.26)
