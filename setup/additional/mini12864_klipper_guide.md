@@ -6,7 +6,7 @@
 2. The EXP1/EXP2 ports must be available and not connected to another expansion module
 
 ## Hardware
-
+*NOTE: only the Fysetc mini12864 requires the connector housings to be reversed.  If you have a BigTree Tech mini12864, skip steps 1 & 2*
 1. Pry off the two black connector housings from the back of the display
 2. Rotate connector housings 180 degrees and insert back onto pins
 3. Connect EXP1 and EXP2 cables to the display and to your MCU board, being sure to match port numbers (EXP1 <> EXP1).
@@ -82,3 +82,10 @@ gcode:
 
 The "delayed gcode" sets the display and two knob neopixels on boot up - index 1 is the display, and index 2 and 3 are the knob LEDs.   Copy the SET_LED command and run it any time through the terminal window in Octoprint to test out different Red/Green/Blue combinations.
 
+## Mini12864 Troubleshooting Checklist
+The Mini12864 display can be a little tricky to get running correctly.  Here is a short checklist to help double check some of the common issues.
+
+* Have you Rotated the headers on the back of the display?  See [Hardware](#hardware) above
+* Is EXP1 connected to EXP1, and EXP2 to EXP2?
+* Have you enabled all the config sections?  you must have `[display]`,  `[output_pin beeper]`, `[neopixel fysetc_mini12864]`, AND `[delayed_gcode setdisplayneopixel]` to fully enable your display
+* Voron2: Is your firmware configuration in agreement with your physical wiring about which MCU board the display is connected to?  ( As provided in the V2 reference printer.cfg, the display should be connected to MCU-Z )
