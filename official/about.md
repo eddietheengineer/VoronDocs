@@ -2,7 +2,7 @@
 
 ### Motion System
 
-All Voron printers are built using CoreXY or CoreXZ configurations to reduce the amount of moving mass, allowing increased acceleration and speeds. These motion systems can work well up until around 350x350 build volumes depending on the model. Depending on the printer, linear rails (MGN7, MGN9, MGN12) or linear rods may be used along the X, Y, and/or Z axes. Gates 6mm and/or 9mm belts are used for movement; genuine Gates Unitta belts are recommended over generic versions for improved reliability and performance. A simple stack of flanged F695 bearings are often used as smooth belt idlers, as the bearings are much larger than the more common GT2 idlers. This provides increased service life.
+All Voron printers are built using CoreXY or CoreXZ configurations to reduce the amount of moving mass, allowing increased acceleration and speeds. Depending on the printer, linear rails (MGN7, MGN9, MGN12) or linear rods may be used along the X, Y, and/or Z axes. Gates 6mm and/or 9mm belts are used for movement; genuine Gates Unitta belts are recommended over generic versions for improved reliability and performance. A simple stack of flanged F695 bearings are often used as smooth belt idlers, as the bearings are much larger than the more common GT2 idlers. This provides increased service life.
 
 ### Frames
 
@@ -18,7 +18,7 @@ In 2015, the very first set of 18 Voron printers were packaged in RCF's garage a
 
 All it takes to recieve a serial number after you have completed your build is to post a video of your printer printing Voron [Subreddit](https://www.reddit.com/r/voroncorexy/). Be sure to have your printer cleaned up with all cable management above the deck plate done. Wiring can be tricky, but do your best!
 
-*Note: the serial submission process has become more automated now. In order to have the bot pick up your serial request video, be sure to use the "Serial Request" flair and add your full Discord name, including the #1234 number after your username. Mods will review the requests periodically!* 
+*Note: the serial submission process has become more automated now. In order to have the bot pick up your serial request video, be sure to use the "Serial Request" flair and add your full Discord name, including the unique 4 digit number (for example, #1234) after your username. Mods will review the requests periodically!* 
 
 ## Unsupported Configurations
 
@@ -33,9 +33,8 @@ Voron printers are specifically designed to be fast and reliable as well as comp
 There are a few reasons Voron does not and will not support active chamber heating:
 
 * It is not necessary to use a chamber heater to achieve sufficient chamber temperatures for ABS or other common 3d printing materials
-* Joe burning his house down
-* Its really easy to screw up for someone that doesnt have great amounts of experience with properly designing, controlling, and mounting them
-* If we spec something and people cheap out, there will be fires involved
+* Its really easy to screw up for someone that doesnt have great amounts of experience with properly designing, controlling, and mounting heaters in high ambient environments
+* If we spec something and people cheap out, there will be fires involved (or, even if we spec something and people don't cheap out, there is a significant chance of it being installed incorrectly)
 
 ### Exotic Materials (PEEK, PEI, etc.)
 
