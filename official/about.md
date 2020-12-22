@@ -16,7 +16,7 @@ All Voron printers use [Klipper](https://www.klipper3d.org/Overview.html) firmwa
 
 In 2015, the very first set of 18 Voron printers were packaged in RCF's garage and shipped as kits. As a fun addition, he gave each kit a serial number. While those were the only printers ever sold directly by RCF, the tradition has lived on as a way to represent the hard work each Voron owner puts into sourcing, assembling, and configuring their printer. It also is a great way to show how the community has grown throughout the years!
 
-All it takes to recieve a serial number after you have completed your build is to post a video of your printer printing Voron [Subreddit](https://www.reddit.com/r/voroncorexy/). Be sure to have your printer cleaned up with all cable management above the deck plate done. Wiring can be tricky, but do your best!
+All it takes to receive a serial number after you have completed your build is to post a video of your printer printing on the Voron [Subreddit](https://www.reddit.com/r/voroncorexy/). Be sure to have your printer cleaned up with all cable management above the deck plate done. Wiring can be tricky, but do your best!
 
 *Note: the serial submission process has become more automated now. In order to have the bot pick up your serial request video, be sure to use the "Serial Request" flair and add your full Discord name, including the unique 4 digit number (for example, #1234) after your username. Mods will review the requests periodically!* 
 
@@ -38,7 +38,7 @@ There are a few reasons Voron does not and will not support active chamber heati
 
 ### Exotic Materials (PEEK, PEI, etc.)
 
-While Vorons are designed to be enclosed, chamber temperatures generally do not exceed 50-60C. This is perfect for printing ABS and even some other Nylon and PC blends, but it is insufficient for exotic materials such as PEEK and PEI which require 100C-130C chamber temperatures. While the jump from 60C to 100C may not sound like a lot, most of the parts in your Voron printer will fail before 100C including all of the 3d printed components, stepper motors, Gates belt, linear bearings, linear rail end caps, inductive probe, Acrylic, and ABS panels, fans...
+While Vorons are designed to be enclosed, chamber temperatures generally do not exceed 50-60C. This is perfect for printing ABS and most Nylon and PC blends, but it is insufficient for exotic materials such as PEEK and PEI which require 100C-130C chamber temperatures. While the jump from 60C to 100C may not sound like a lot, most of the parts in your Voron printer will fail before 100C including all of the 3d printed components, stepper motors, Gates belt, linear bearings, linear rail end caps, inductive probe, Acrylic, and ABS panels, fans...
 
 Voron printers are currently not designed for exotic materials and there are no plans to modify the design to support this in the future. We recommend purchasing an industrial printer designed for this purpose if you intend to print with these materials.
 
