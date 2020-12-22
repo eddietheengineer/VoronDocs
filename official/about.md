@@ -2,7 +2,7 @@
 
 ### Motion System
 
-All Voron printers are built using CoreXY or CoreXZ configurations to reduce the amount of moving mass. These motion systems can work well up until around 350x350 build volumes. Depending on the printer, linear rails (MGN7, MGN9, MGN12) or linear rods may be used along the X, Y, and/or Z axes. Gates 6mm and/or 9mm belts are used for movement; genuine Gates Unitta belts are recommended over generic versions for improved reliability and performance. A simple stack of flanged F695 bearings are often used as smooth belt idlers, as the bearings are much larger than the more common GT2 idlers. This provides increased service life.
+All Voron printers are built using CoreXY or CoreXZ configurations to reduce the amount of moving mass, allowing increased acceleration and speeds. These motion systems can work well up until around 350x350 build volumes depending on the model. Depending on the printer, linear rails (MGN7, MGN9, MGN12) or linear rods may be used along the X, Y, and/or Z axes. Gates 6mm and/or 9mm belts are used for movement; genuine Gates Unitta belts are recommended over generic versions for improved reliability and performance. A simple stack of flanged F695 bearings are often used as smooth belt idlers, as the bearings are much larger than the more common GT2 idlers. This provides increased service life.
 
 ### Frames
 
