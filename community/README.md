@@ -10,3 +10,7 @@ Please check the following sections:
 #### [Custom Macros](./macros/README.md)
 #### [Video Guides](./video_guides.md)
 #### [Other Resources](./resources.md)
+
+---
+
+#### [Submission Information](./support/submission_information.md)

@@ -2,8 +2,8 @@
 
 | Guide Name / Link | Author |
 |---|---|
-| [Blob of Death](./blob_of_death) | 120decibell |
-| [printer.cfg Changes](./printer.cfg_changes) | shiftingtech|
+| [Blob of Death](./120decibell/blob_of_death.md) | 120decibell |
+| [printer.cfg Changes](./shiftingtech/printer.cfg_changes.md) | shiftingtech |
 
 ## Still Needed
 

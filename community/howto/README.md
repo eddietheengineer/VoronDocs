@@ -4,7 +4,7 @@ Community-generated documentation for the many items that the official guide may
 
 | Guide Name / Link | Author |
 |---|---|
-| [Z Endstop Configuration](./z_endstop_configuration) | 120decibell |
+| [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
 
 ## Still Needed
 
