@@ -11,7 +11,7 @@ When wiring your printer electronics, you will be working with line voltage wiri
 ## Tips
 
 * Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on and sometimes hard to identify!
-* Safety Mains cables should be properly dimensioned. Use at least 20 AWG for mains connections, even better would be 18 AWG.
+* Safety Mains cables should be properly dimensioned. Use at least 20 AWG (1 mm²) for mains connections, even better would be 18 AWG (1.5 mm²).
 * Buy a quality SSR, do not source one from China or your house will catch on fire (see Official Sourcing Sheet)! Add a 115-125°C thermofuse to your bed heater as an additional safety measure.
 * Dont run your bed above 105°C, this greatly reduces the lifespan of the adhesive holding it onto the build plate. Additionally it is recommended to run a bead of high temperature RTV sealant around the edge of the heater.
 * Connect ground to your bed! Connect a ground to your frame!

@@ -4,7 +4,7 @@
 
 ### General
 
-* Avoid Excessive Force
+* Avoid excessive force!
 * Take your time, measure twice.
 * This is not rocket science (it's garden tools), we do not need 0.001mm precision.
 

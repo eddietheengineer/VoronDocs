@@ -82,6 +82,12 @@ Engineer PA-09, PA-20, or PA-21. Yes, it's worth the cost.
 
 The gantry wiring should be all 24 gauge wire except for the hot end heater, which should be wired with 20 gauge.  This will permit all of the wires to fit within the drag chains.  The power wiring (AC and DC) should be at least 20 gauge, preferably larger (18 or 16 gauge).
 
+In metric units:
+- Power Wiring/Mains Wiring: at least 1 mm², better 1.5 mm²
+- Hotend Heater: 0.5 mm²
+- Stepper Motors: 0.25 mm²
+- everything else (endstops, thermistors, fans (if wired separately!), ...): 0.14 mm²; can also be done in 0.25 mm² for easier sourcing
+
 ### PTFE or Silicone wire?
 
 The BOM currently specifies silicone wire for bend and heat toleraance.  For an increased cost, PTFE wire is a option.  PTFE insulation is thinner and slicker, making it more effective in the drag chains.
