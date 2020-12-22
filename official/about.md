@@ -24,17 +24,18 @@ All it takes to receive a serial number after you have completed your build is t
 
 ### Large Format Printers
 
-As print volumes for CoreXY printers grow (including Voron), they become increasingly difficult to build, tune, operate, and maintain. This is primarily due to the long belts in the XY plane that reduce in stiffness as the build volume increases. The belt stiffness is inversely proportional to the belt length--as the belt length doubles, the stiffness is reduced by 50%. As stiffness is reduced, print acceleration and speeds must decrease as well to avoid a reduction in print quality. Tensioning the belts properly also becomes difficult--too loose and the belts may come off the pulleys, too tight and print artifacts may appear or bearings may fail prematurely. Finally, as the X axis grows in length, the tendency for the axis to "rack" (not be perpendicular to the Y axis) grows.
+As print volumes for CoreXY printers grow, they become increasingly difficult to build, tune, operate, and maintain. Vorons are no exception to these fundamentals.
 
-Voron printers are specifically designed to be fast and reliable as well as compact for a given build volume. This allows build sizes to reach 350x350 with a relatively short belt length compared to some other CoreXY printers. While some users have built Vorons larger than 350x350, the general feedback is that they regret doing so as it made tuning and operation substantially more difficult. Please be mindful of the current size specifications listed for each printer and do not exceed the maximum recommended size.
+Please be mindful of the size specifications listed for each Voron printer--these have been chosen based on  limitations of the components and structure unique to each model. We do not recommend exceeding the largest size.
 
 ### Chamber Heating
 
 There are a few reasons Voron does not and will not support active chamber heating:
 
 * It is not necessary to use a chamber heater to achieve sufficient chamber temperatures for ABS or other common 3d printing materials
-* Its really easy to screw up for someone that doesnt have great amounts of experience with properly designing, controlling, and mounting heaters in high ambient environments
-* If we spec something and people cheap out, there will be fires involved (or, even if we spec something and people don't cheap out, there is a significant chance of it being installed incorrectly)
+* It is easy to screw up for someone that doesn't have direct experience with properly designing, controlling, and mounting heaters in high temperature environments
+* If we spec something and people cheap out, there will be fires involved
+* If we spec something and people don't cheap out but don't install it correctly, there will be fires involved
 
 ### Exotic Materials (PEEK, PEI, etc.)
 
