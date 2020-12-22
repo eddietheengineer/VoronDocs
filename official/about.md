@@ -1,53 +1,53 @@
 # About Voron
 
-All Voron printers are built using CoreXY or CoreXZ configurations.  No Cartesian motion systems to be found.  The following reviews some of common features of Voron printers.
+### Motion System
 
-## What a Voron does
+All Voron printers are built using CoreXY or CoreXZ configurations to reduce the amount of moving mass. These motion systems can work well up until around 350x350 build volumes. Depending on the printer, linear rails (MGN7, MGN9, MGN12) or linear rods may be used along the X, Y, and/or Z axes. Gates 6mm and/or 9mm belts are used for movement; genuine Gates Unitta belts are recommended over generic versions for improved reliability and performance. A simple stack of flanged F695 bearings are often used as smooth belt idlers, as the bearings are much larger than the more common GT2 idlers. This provides increased service life.
 
 ### Frames
 
-All V1 and V2 frames are constructed with 2020 aluminum extrusions.  The V0 is built with 1515 Makerbeam XL and the Switchwire is constructed with 6030 and 3030 extrusions.  The 2020 for the V1 and V2 is considered sufficient for the application.  3D printers are not CNC machines and the strength to weight / stiffness ratio is more than sufficient for 3D printing where no side loads or cutting loads are imparted.
+All V1 and V2 frames are constructed with 2020 aluminum extrusions with a 6mm slot width.  The V0 is built with 1515 Makerbeam XL extrusions and the Switchwire is constructed with 6030 and 3030 extrusions. Be sure to pay attention to the extrusion profile--not all extrusion types are the same, even if the outer dimensions are equal!
 
 ### Motion Control - Klipper
 
-All Voron printers are by default specified too use [Klipper](https://www.klipper3d.org/Overview.html) as the underlying control system. Klipper, in our case, uses a Raspberry Pi for all the computational-heavy tasks and sends a list of preprocessed orders to the controller board. This allows for high speed processing while still allowing inexpensive controllers.
+All Voron printers use [Klipper](https://www.klipper3d.org/Overview.html) firmware. Klipper uses a Raspberry Pi for all the computation-heavy tasks and sends a list of preprocessed orders to the controller board. This gives a considerable amount of flexibility as a variety of control boards (or combination of boards) can be easily configured. As well, more complex features such as input shaping (to reduce ringing) can be added no matter what control board is used. Finally, configuring firmware is fast and easy. Change your the desired parameter in an easy to read printer configuration file, save, and restart Klipper--a few seconds later the printer is ready to go!
 
 ### Serial Numbers
 
-Getting a serial number for the Voron means something, it is highly encouraged. All that it takes is to have completed cable management above the deck plate, toolhead doors attached and closed, and a video of a print in progress showing the complete printer, including these details, submitted to the Voron [Subreddit](https://www.reddit.com/r/voroncorexy/).
+In 2015, the very first set of 18 Voron printers were packaged in RCF's garage and shipped as kits. As a fun addition, he gave each kit a serial number. While those were the only printers ever sold directly by RCF, the tradition has lived on as a way to represent the hard work each Voron owner puts into sourcing, assembling, and configuring their printer. It also is a great way to show how the community has grown throughout the years!
 
-*Note: be sure to correctly flair your submission as a serial request or it may get overlooked. Mods try to process requests a couple of times a week so please be patient.*
+All it takes to recieve a serial number after you have completed your build is to post a video of your printer printing Voron [Subreddit](https://www.reddit.com/r/voroncorexy/). Be sure to have your printer cleaned up with all cable management above the deck plate done. Wiring can be tricky, but do your best!
 
-## What a Voron doesn't
+*Note: the serial submission process has become more automated now. In order to have the bot pick up your serial request video, be sure to use the "Serial Request" flair and add your full Discord name, including the #1234 number after your username. Mods will review the requests periodically!* 
+
+## Unsupported Configurations
+
+### Large Format Printers
+
+As print volumes for CoreXY printers grow (including Voron), they become increasingly difficult to build, tune, operate, and maintain. This is primarily due to the long belts in the XY plane that reduce in stiffness as the build volume increases. The belt stiffness is inversely proportional to the belt length--as the belt length doubles, the stiffness is reduced by 50%. As stiffness is reduced, print acceleration and speeds must decrease as well to avoid a reduction in print quality. Tensioning the belts properly also becomes difficult--too loose and the belts may come off the pulleys, too tight and print artifacts may appear or bearings may fail prematurely. Finally, as the X axis grows in length, the tendency for the axis to "rack" (not be perpendicular to the Y axis) grows.
+
+Voron printers are specifically designed to be fast and reliable as well as compact for a given build volume. This allows build sizes to reach 350x350 with a relatively short belt length compared to some other CoreXY printers. While some users have built Vorons larger than 350x350, the general feedback is that they regret doing so as it made tuning and operation substantially more difficult. Please be mindful of the current size specifications listed for each printer and do not exceed the maximum recommended size.
 
 ### Chamber Heating
 
-There are a few reasons Voron does not and will not officially support active chamber heating.
+There are a few reasons Voron does not and will not support active chamber heating:
 
-* Big company patents and lawyers
+* It is not necessary to use a chamber heater to achieve sufficient chamber temperatures for ABS or other common 3d printing materials
 * Joe burning his house down
-* Its really easy to screw up for someone that doesnt have great amounts of experience with properly controlling/mounting them
+* Its really easy to screw up for someone that doesnt have great amounts of experience with properly designing, controlling, and mounting them
 * If we spec something and people cheap out, there will be fires involved
 
 ### Exotic Materials (PEEK, PEI, etc.)
 
-A Voron is made from printed abs parts and does not support being built with other materials. The voron does not have a heated chamber, therefore it is not designed to print exotic materials. Exotics such as peek require build chamber temperatures of over 100C to print properly, which will result in everything in the chamber self-destructing. Belts are good to 80C max, steppers around 90C, printed parts start deforming around 70C. Adding a chamber heater would exceed the current requirements of a standard home circuit (with buffer), a standard voron can draw up to 10A easily from the wall during warmup.
+While Vorons are designed to be enclosed, chamber temperatures generally do not exceed 50-60C. This is perfect for printing ABS and even some other Nylon and PC blends, but it is insufficient for exotic materials such as PEEK and PEI which require 100C-130C chamber temperatures. While the jump from 60C to 100C may not sound like a lot, most of the parts in your Voron printer will fail before 100C including all of the 3d printed components, stepper motors, Gates belt, linear bearings, linear rail end caps, inductive probe, Acrylic, and ABS panels, fans...
 
-The true recommended chamber temp for PEEK is 130C, for True Nylon or PC (not hybrids or blends) is 100C, below this you will see delamination. This basicaly equates to putting your printer in an oven, you'd want the least amount possible of the motion system in the "hot zone" and a ton of insulation. VORON is currently not designed for this, and it is not planned to be.
-
-This machine is intended such that it can be built with "garden tools", chamber heaters violate this, and add unnecessary risk to the end user. We recommend you purchase an industrial printer designed for this purpose if you intend to print with these materials so you don't end up with a fire on your hands.
-
-### Watercooling
-
-Watercooling is not supported because of the risk associated with it, leaks and mains voltage don't play well with each other. You need a separate cable chain to properly run the tubing which would not fit inside the machine (XY is mostly the issue, but there is an issue with the Z also).  Adding a water pump and a chamber heater will easily push it near a 15A current draw, as internal testing has determined you would need approximately 700W of heating power to warm the chamber to 75C (per multiple ansys simulations)
+Voron printers are currently not designed for exotic materials and there are no plans to modify the design to support this in the future. We recommend purchasing an industrial printer designed for this purpose if you intend to print with these materials.
 
 ### Multimaterial
 
-Voron does not currently support dual extrusion, dual hot ends, tool changers, or other such things (officially).  There are individual users doing independent development testing, but nothing is officially supported.
+Voron does not currently support dual extrusion, dual hot ends, tool changers, or other multimaterial solutions. The only exception to this is the bowden Y splitter attachment which is available for the Afterburner tool head--please note that this attachment is still considered "beta" level and as with all Y-splitter solutions, tuning the filament switch routine is difficult.
 
-### Large Scale
 
-Building any CoreXY printer (including Voron) larger than 350^2 will be more expensive, with a reduction in print quality, and print slower than the supported sizes. The Voron was also never designed to support those sizes so builders will likely run into structural issues. The VORON Design team does not endorse or support printers larger than 350 x 350 in the XY and 500 in the Z due to internal testing.
 
 ---
 
