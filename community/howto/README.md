@@ -5,6 +5,7 @@ Community-generated documentation for the many items that the official guide may
 | Guide Name / Link | Author |
 |---|---|
 | [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
+| [Chamber Temperature Exhaust Fan](./alchemyEngine/chamber_temperature_exhaust_fan.md) | alchemyEngine |
 
 ## Still Needed
 
@@ -21,3 +22,7 @@ Community-generated documentation for the many items that the official guide may
 11. Calculating driver current settings
 12. Add LED Lighting
 13. Tensioning Belts
+
+### External Links
+
+* [Changing OctoPi Hostname](https://github.com/guysoft/OctoPi/wiki/Changing-the-hostname)

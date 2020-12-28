@@ -132,7 +132,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 
 ### Mini12864 Display (V1, V2, Switchwire)
 
-If installing a Mini12864 display, please follow the Mini12864 Klipper Guide located in the [Additional](../../setup/additional/README.md) section.
+If installing a Mini12864 display, please follow the [Mini12864 Klipper Guide](./mini12864_klipper_guide.md).
 
 ### Using non-24V fans with a 24V powered MCU
 

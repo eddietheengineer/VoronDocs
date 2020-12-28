@@ -16,7 +16,10 @@ Using a secure file transfer program (WinSCP, Cyberduck, Notepad++, NppFT, BBEdi
 
 Copy the downloaded file into place with `cp ~/klipper/config/FILENAME_OF_VORON_CONFIG.cfg ~/printer.cfg`
 
-**Note:** There are many ways of editing the config file that vary by personal preference.  Using Nano editor through SSH is simple but not always user friendly.  Notepad++ with the NppFTP plugin (Windows) or bbEdit (macOS) are user friendlier alternatives.  Instructions are found in the appendix.
+**Note:** There are many ways of editing the config file that vary by personal preference.  Using Nano editor through SSH is simple but not always user friendly.  Notepad++ with the NppFTP plugin (Windows) or bbEdit (macOS) are user friendlier alternatives.  
+
+* [Notepad++ Information](./notepadplusplus.md)
+* [bbEdit Information](./bbedit.md)
 
 Review the configuration file by running `nano ~/printer.cfg`
 
