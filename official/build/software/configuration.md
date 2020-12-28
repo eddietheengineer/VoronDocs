@@ -106,6 +106,12 @@ This section only applies to printers with more than one controller.
 10. **If printer is a V2**, Under **[quad\_gantry\_level]**, uncomment the _gantry\_corners_ and _points_ sections appropriate to the printer size.  Delete the other options to prevent confusion.
 11. Exit the text editor with CTRL-X  and save when prompted.
 
+#### Optional: Set motor currents
+
+If using non-spec motors, the settings for motor current may need to be changed.  Klipper configures current in RMS and most motors are specified using peak current.  To convert peak to RMS, multiply peak current by 0.707.  It is not recommended to exceed the maximum current the motors are capable of, but they can be run lower if desired.
+
+### Restart to take effect
+
 Under Octoprint's terminal tab type `FIRMWARE_RESTART` and press enter to send the command to restart Klipper.
 
 The terminal window should show the following:
