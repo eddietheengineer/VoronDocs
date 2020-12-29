@@ -4,8 +4,14 @@ Community-generated documentation for the many items that the official guide may
 
 | Guide Name / Link | Author |
 |---|---|
-| [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
+| [Calculating Driver Current Settings](./120decibell/calculating_driver_current.md) | 120decibell |
 | [Chamber Temperature Exhaust Fan](./alchemyEngine/chamber_temperature_exhaust_fan.md) | alchemyEngine |
+| [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
+
+
+### External Links
+
+* [Changing OctoPi Hostname](https://github.com/guysoft/OctoPi/wiki/Changing-the-hostname)
 
 ## Still Needed
 
@@ -19,10 +25,5 @@ Community-generated documentation for the many items that the official guide may
 8. RAMPS 24V Conversion
 9. V6 Hotend Assembly
 10. Drill and Counterbore Voron Bed
-11. Calculating driver current settings
 12. Add LED Lighting
-13. Tensioning Belts
 
-### External Links
-
-* [Changing OctoPi Hostname](https://github.com/guysoft/OctoPi/wiki/Changing-the-hostname)
