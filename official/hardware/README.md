@@ -30,6 +30,12 @@ The [Switchwire](http://vorondesign.com/voron_switchwire) is a Voron take on a c
 
 ![](./images/VoronSW.jpg)
 
+## Legacy
+
+The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LMU8 rods and bearings but retains the new Afterburner toolhead.  It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LMU8 components.
+
+![](./images/VoronLegacy.jpg)
+
 # Extruders and Variants
 
 ## Mobius (M4)
