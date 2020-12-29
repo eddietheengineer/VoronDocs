@@ -4,7 +4,7 @@ This is a guide to help people in selecting and building their first Voron print
 
 # Printer Models
 
-There are currently 4 printers in the Voron lineup.  One is not necessarily better than the other, just different.  All printers are capable of being fully enclosed to print ABS but can just as easily print PLA, PETG, or even Nylon.  All printers in the Voron lineup are designed to use a Raspberry Pi linked to one or more motor controller board(s) to manage all of the printer functions and interface controls.
+There are currently 5 printers in the Voron lineup.  One is not necessarily better than the other, just different.  All printers (ecept Legacy) are capable of being fully enclosed to print ABS but can just as easily print PLA, PETG, or even Nylon.  All printers in the Voron lineup are designed to use a Raspberry Pi linked to one or more motor controller board(s) to manage all of the printer functions and interface controls.
 
 ## Voron 0
 
@@ -32,7 +32,7 @@ The [Switchwire](http://vorondesign.com/voron_switchwire) is a Voron take on a c
 
 ## Legacy
 
-The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LMU8 rods and bearings but retains the new Afterburner toolhead.  It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LMU8 components.
+The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LM8UU rods and bearings but retains the new Afterburner toolhead.  It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LM8UU components.
 
 ![](./images/VoronLegacy.jpg)
 
