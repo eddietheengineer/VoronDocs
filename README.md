@@ -28,4 +28,4 @@ This documentation is community provided.  It may contain some different methods
 5. [Video Guides](./community/video_guides.md)
 6. [Other Resources](./community/resources.md)
 
-![](./support/images/V2-beauty-shot.jpg)
+![](./official/hardware/images/Voron2.jpg)
