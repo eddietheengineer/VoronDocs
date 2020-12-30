@@ -13,3 +13,7 @@ To calculate the maximum Klipper current settings for a given stepper, follow th
 #### Example
 
 The LDO 42STH130-1684 is specified with a maximum current of 1.68 Amps.  Maximum run current is 1.68 * .707 = 1.1877, rounded down to a maximum RMS run current of 1.1 Amps.  Maximum hold current is 1.1877 * 0.6 = 0.712, rounded to a maximum hold current of 0.7 Amps. 
+
+### Maximums
+
+Whatever the maximum calculated current of the motor is, the maximum capacity of the 2209 driver is 1.2 Amps.  Also, the calculation is for the maximum the motor can handle.  It is recommended to start with smaller values and work from there.
