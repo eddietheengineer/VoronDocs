@@ -4,17 +4,21 @@
 
 ### Material
 
-Voron printers are designed to be able to print ABS and other materials that can require elevated chamber temperatures in excess of 60C. As a result materials that have a heat deflection temperature or glass transition temperature of 90C or higher are strongly recommended for making the Voron components from. While other materials may meet the requirements, from a cost/benefit perspective, ABS and ABS+ are the most recommended materials.
+Voron printers are designed to print ABS and other filaments that require an enclosure. Depending on the model, size of printer, and materials used for the enclosure, chamber temperatures may exceed 60C. As a result, Voron recommends printing the structural components for your printer out of a material that has a heat deflection temperature of at least 90C. While there are more exotic materials that meet this criteria, ABS and ABS+ are the most common and cost effective options.
 
-Most hobby-grade resin prints have issues with long-term dimensional stability. Many of them will continue to shrink as they slowly dry out, making them unsuitable for long-term structural use. There are many commercial resins that would likely work but there is no definitive list at this time.
+Using a resin printer for components is not recommended. Most hobby-grade resins have issues with long-term dimensional stability as they [creep](https://en.wikipedia.org/wiki/Creep_(deformation)) over time. There are commercial resins that may work but there is no definitive list at this time.
 
-If the prospective Voron owner is not currently able to print in ABS for any reason, we recommend looking at the Voron print-it-forward (PIF) program. Individuals can submit a request for another Voron owner to print the minimum functional parts for them. There are costs and wait times associated.
+### Print It Forward (PIF)
+
+If you are not able to print the ABS parts of a Voron yourself, there is a community-driven service called Print it Forward (PIF) in place. The goal of PIF is to provide a set of necessary structural parts for a Voron printer of your desire, printed on a Voron 3D Printer, showcasing their print quality. Every PIF-Provider undergoes a thorough vetting procedure in order to provide parts capable of demonstrating of what a Voron is capable of. PIF is a non-profit project, the pricing is set to compensate for the filament, energy and wear on the provider's rig.
+
+More information and the current queue length can be found on the [PIF Website](https://pif.voron.dev/). There is also a separate channel on the Voron discord, where questions can be asked.
 
 ### Colors and Quantities
 
 The recommended accent parts are denoted with a "[a]_" in the filename. Many of these are still functional in nature and should still follow the recommended print settings.
 
-If any file ends with "_x#", that is an indication that the part requires that quantity to be made for that machine.
+Filenames that end with "_x#", indicate that the part must be printed multiple times (ie. x2, x4, etc.)
 
 Typical printers require approximately 1.5kg of the primary color and 0.3kg of the alternate color, assuming no failed or reprinted parts. Most people end up reprinting a few parts and a few mods, so plan on 2kg of the primary color.
 
@@ -30,12 +34,6 @@ These are the recommended settings.
 - Solid top/bottom layers: 5
 - Supports: NONE
 
-### Print It Forward (PIF)
-
-If you are not able to print the ABS parts of a Voron yourself, there is a community-driven service called Print it Forward (PIF) in place. The goal of PIF is to provide a set of necessary structural parts for a Voron printer of your desire, printed on a Voron 3D Printer, showcasing their print quality. Every PIF-Provider undergoes a thorough vetting procedure in order to provide parts capable of demonstrating of what a Voron is capable of. PIF is a non-profit project, the pricing is set to compensate for the filament, energy and wear on the provider's rig.
-
-More information and the current queue length can be found on the [PIF Website](https://pif.voron.dev/). There is also a separate channel on the Voron discord, where questions can be asked.
-
 
 ## Ordering Parts
 
@@ -43,7 +41,7 @@ For every printer on the main webpage, there is a method to generate a bill of m
 
 *When purchasing small items, it is recommended to buy extras (round up). Having a few extra screws or connectors around may actually help you later.*
 
-_Note:_ The generated BOM part numbers for Misumi extrusions are the exact part numbers.  Enter them into Misumi's website and they will return exactly what needs to be ordered, down to drilling holes and tapping ends.
+_Note:_ The generated BOM part numbers for Misumi extrusions are the exact part numbers.  Enter them into Misumi's website and they will return exactly what needs to be ordered, including any extra drilling or tapping operations.
 
 There are a growing number of suppliers that are assembling kits to build Voron printers.  Outside of the sourcing guide, Voron does not implicitly endorse any specific vendor of Voron kits.
 
