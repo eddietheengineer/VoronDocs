@@ -9,6 +9,8 @@
 * Plug Part Cooling Fan in to HB
 * Plug Bed Thermistor in to THB
 * Connect SSR pins to PT-DET connector
+  * Crydom SSR: SSR Input + => PC12, SSR Input => GND
+  * MagicStudios / Knacro 1-Channel SSR: CH1 => PC12, DC- => GND, DC+ => NC
 * Connect X end stop to X-STOP connector
 * Connect Y end stop to Y-STOP connector
 * Connect Z end stop to Z-STOP connector
@@ -16,6 +18,13 @@
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
 ![](./images/v0-miniE3-v20-mcu.png)
+
+
+### Wiring for MagicStudios / Knacro 1-Channel SSR
+
+The MagicStudios / Knacro SSR requires 3 wires instead of the 2 referenced above.
+
+![Knacro Wiring](./images/knacro_ssr_wiring_diagram.png)
 
 
 ## Mini E3 V2.0 Pinout
