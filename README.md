@@ -2,16 +2,30 @@
 
 Welcome to the world of Voron 3D printers!
 
-This is the Voron Community Documentation site. All documentation found here is community provided and should be treated as such. It is provided as a resource to share experience from Voron owners.
+This is the Voron Documentation site. All of the information needed to go from zero to a working Voron printer can be found here.
 
-If you are building a Voron for the first time, please see the [first time builders guide](./first_time_guide.md) and the [FAQ](./faq.md)
+## Official Documentation
 
-For the Bill of Materials / Sourcing Guide, please to the the [main website](http://vorondesign.com)
+This information is considered to be "official" and what is supported.  If this is the first visit, please start with the overview.
 
-To assemble the hardware, please go to the [assembly guides](./assembly) for information.  There is an assembly guide for each printer model.
+1. [Overview](./official/README.md)
+2. [About Voron](./official/about.md)
+3. [Choosing A Printer / Extruder](./official/hardware/README.md)
+4. [Sourcing Information](./official/sourcing.md)
+5. [The Build](./official/build/README.md)
+6. [Tuning Guides](./official/tuning/README.md)
+7. [Maintenance](./official/maintenance/README.md)
+8. [Voron History](./official/history.md)
 
-Once the hardware assembly is complete, please go to the [setup guide](./setup/README.md) to go from assembled hardware to a working printer. For setting up items above and beyond the basic setup, check the [additional guides](./setup/additional/README.md)
+## Community Documentation
 
-For continued tuning, or if help is needed after the initial setup, check out the [support section](./support/README.md)
+This documentation is community provided.  It may contain some different methods or guidance from the official documentation.
+
+1. [How To Guides](./community/howto/README.md)
+2. [Troubleshooting](./community/troubleshooting/README.md)
+3. [Alternate Electronics](./community/electronics/README.md)
+4. [Custom Macros](./community/macros/README.md)
+5. [Video Guides](./community/video_guides.md)
+6. [Other Resources](./community/resources.md)
 
 ![](./support/images/V2-beauty-shot.jpg)
