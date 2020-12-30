@@ -10,28 +10,26 @@
 
 ### Frame
 
-* A granite countertop or other similarly flat surfaces helps with rail alignment to ensure a square frame
+* A granite countertop or other similarly flat surface will with extrusion alignment to ensure a square frame
 * Measure diagonals to check squareness - measurements should be < 2mm different.
-* Using blind joints extrusions may rotate. This will be prevented by the panel corners and skirts later in the build
+* Extrusions that are attached using blind joints may rotate. This will be prevented by the panel corners and skirts later in the build
 
 ### Idler / drive unit assembly
 
-* The assumed standard washer thickness is 1mm. Washer thickness varies, so washer counts in the manual are meant as guidance. Differently sourced washers also have different tolerances.  Your washer count may vary. It may be useful to have 0.5mm washers at hand to align pulleys and bearings optimally in your build or to swap in and out to ensure proper fitment.
+* M5 standard washer thickness is 1±0.2mm, so washer counts in the manual are meant as guidance. As an option, you may purchase 1mm thick shims which have tighter tolerances. It may be useful to have 0.5mm washers at hand to align pulleys and bearings optimally in your build or to swap in and out to ensure proper fitment
 * Make sure your toothed pulleys are GT2/2GT!
-* Make sure your pulleys do not wobble. Just rotate them on a shaft and look for eccentric movement of the teeth. The flanges are not critical.
-* Use gates GT2/2GT belts for the open loop belts!
-* A bit of shaft lean is fine
+* Make sure your pulleys do not wobble. Rotate them on a shaft and look for eccentric movement of the teeth. The flanges are not critical
+* Use Gates GT2/2GT belts for the open loop belts--off brand/generic GT2/2GT belt is commonly wider than 6mm which will cause it to ride up on the flanges of the idler bearings
 
 ### Belts
 
 * Make sure that both A/B or X/Z (Switchwire) belts are of equal length!
 * If using a belted Z (V2), make sure all Z belts are the same lenth.
-* Hemostats help a lot when tensioning the gantry belts if you don't have a helping hand
-* Do not cut belts flush once assembled, leave a bit for adjustments or reassembly
+* Do not cut belts flush once assembled, leave an inch or two for adjustments or reassembly
 
 ### Gantry Assembly
 
-* The gantry can be assembled and belted before you install it in the frame.
+* The gantry can be assembled and belted before you install it in the frame. Measure the outer width of the gantry before tightening to make sure it is correct
 * Routing the belt in the a/b drives looks tricky, but there are several ways to ease this:
 	* Fix something stiff like a cable tie or some wire to the end of the belt to help with routing
 	* Use dental picks to guide the belt
@@ -72,6 +70,12 @@
 [Previous Versions](./manuals/historical)
 
 ## Switchwire
+
+### Current
+
+(coming soon)
+
+## Legacy
 
 ### Current
 
