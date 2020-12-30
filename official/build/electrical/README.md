@@ -11,14 +11,14 @@ When wiring your printer electronics, you will be working with line voltage wiri
 ## Tips
 
 * Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on and sometimes hard to identify!
-* Safety Mains cables should be properly dimensioned. Use at least 20 AWG (1 mm²) for mains connections, even better would be 18 AWG (1.5 mm²).
-* Buy a quality SSR, do not source one from China or your house will catch on fire (see Official Sourcing Sheet)! Add a 115-125°C thermofuse to your bed heater as an additional safety measure.
-* Dont run your bed above 105°C, this greatly reduces the lifespan of the adhesive holding it onto the build plate. Additionally it is recommended to run a bead of high temperature RTV sealant around the edge of the heater.
-* Connect ground to your bed! Connect a ground to your frame!
+* AC wiring should be properly dimensioned. Use at least 20 AWG (1 mm²) for mains AC wiring, even better would be 18 AWG (1.5 mm²)
+* Buy a quality SSR (see the official sourcing guide), cheap clones may overheat and fail closed causing a heater thermal runaway. Add a 115-125°C thermal fuse to your bed heater as an additional safety measure
+* Dont run your bed above 110°C, this reduces the lifespan of the adhesive holding it onto the build plate
+* Connect AC ground to your bed and frame
 
 ## Connectors
 
-The recommended MicroFit 3.0 connectors are specced up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). Adding molex connectors to all stepper motors is useful. You can disconnect motors while moving the gantry manually to avoid damage to the MCU board(s). Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin microfit connector.
+The recommended MicroFit 3.0 connectors are specced up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). Adding molex connectors to all stepper motors is useful. Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin microfit connector.
 
 ### Microfit Pins
 
@@ -28,7 +28,7 @@ When assembling Microfit connectors, the male pins are inserted into the female 
 
 ## Cables
 
-The spec'ed silicone wire has been chosen because: It is very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
+Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
 
 See the cable lengths and count section for specific counts. Do not downsize the hot end heater wires, they are oversized for safety reasons. 
 
