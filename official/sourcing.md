@@ -51,9 +51,9 @@ There are a growing number of suppliers that are assembling kits to build Voron 
 
 When choosing extrusions, V-slot extrusions are discouraged.  This is due to the use of the MGN9 linear rail as the V-slot and width of the rail are very close and cause misalignment.  Vendors of extrusions other than Misumi are generally fine but verification of the extrusion profile is highly recommended.
 
-If trying to keep costs down, the screen on any printer is entirely optional. Many builders soley use the web interface.
+If trying to keep costs down, the screen on any printer is entirely optional. Many builders solely use the web interface.
 
-Builders are welcome to make substitutions as they see fit but this printer is not a race to be as cheap as possible. It is designed to compete with many other high-end printers will still being affordable. Substituting parts may also have other unintended side effects and cause compatibility issues. Please feel free to ask for advice before any substitutions are made.
+Builders are welcome to make substitutions as they see fit but this printer is not a race to be as cheap as possible. It is designed to compete with many other high-end printers while still being affordable. Substituting parts may also have other unintended side effects and cause compatibility issues. Please feel free to ask for advice before any substitutions are made.
 
 More sourcing information can be found in the [sourcing FAQ](./sourcing_faq.md)
 

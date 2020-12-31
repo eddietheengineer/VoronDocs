@@ -37,7 +37,7 @@ The OctoPrint web server needs to be configured to communicate with the Klipper 
 
 ## Mainsail
 
-Mainsail is a lightweight web interface for Klipper and other subsystems.  It does not support plugins but generally doesn't need to.  To install Mainsail, follow the [instructions on the Mainsail page](https://github.com/meteyou/mainsail/blob/master/docs/installation.md).
+Mainsail is a lightweight web interface for Klipper and other subsystems.  It does not support plugins but generally doesn't need to.  To install Mainsail, follow the [instructions on the Mainsail page](https://meteyou.github.io/mainsail/).
 
 **Do not install Mainsail onto an OctoPi image!**
 

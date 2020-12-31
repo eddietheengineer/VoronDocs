@@ -12,13 +12,13 @@ When wiring your printer electronics, you will be working with line voltage wiri
 
 * Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on and sometimes hard to identify!
 * Safety Mains cables should be properly dimensioned. Use at least 20 AWG (1 mm²) for mains connections, even better would be 18 AWG (1.5 mm²).
-* Buy a quality SSR, do not source one from China or your house will catch on fire (see Official Sourcing Sheet)! Add a 115-125°C thermofuse to your bed heater as an additional safety measure.
-* Dont run your bed above 105°C, this greatly reduces the lifespan of the adhesive holding it onto the build plate. Additionally it is recommended to run a bead of high temperature RTV sealant around the edge of the heater.
+* Buy a quality SSR, do not source one from China or your house will catch on fire (see Official Sourcing Sheet)! Add a 115-125C thermofuse to your bed heater as an additional safety measure.
+* Don't run your bed above 105C, this greatly reduces the lifespan of the adhesive holding it onto the build plate. Additionally it is recommended to run a bead of high temperature RTV sealant around the edge of the heater.
 * Connect ground to your bed! Connect a ground to your frame!
 
 ## Connectors
 
-The recommended MicroFit 3.0 connectors are specced up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). Adding molex connectors to all stepper motors is useful. You can disconnect motors while moving the gantry manually to avoid damage to the MCU board(s). Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin microfit connector.
+The recommended MicroFit 3.0 connectors are specced up to 5A and should be used for all connections to the stepper motors, hotend and limit switches. The JST connectors are used for connections to the MCU board(s). Adding molex connectors to all stepper motors is useful. You can disconnect motors while moving the gantry manually to avoid damage to the MCU board(s). Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin microfit connector.
 
 ### Microfit Pins
 
@@ -28,18 +28,20 @@ When assembling Microfit connectors, the male pins are inserted into the female 
 
 ## Cables
 
-The spec'ed silicone wire has been chosen because: It is very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
+The spec'ed silicone wire has been chosen because it has a very high strand count, which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains.
+
+PTFE wires are a premium option as they have a thinner insulation and a lower friction coefficient, which increases bending capabilities and decreases wear. But these advantages are most useful in printers that use cable chains. For printers with an umbilical cord cabling setup (V0 Toolhead, Legacy), they might be overkill.
 
 See the cable lengths and count section for specific counts. Do not downsize the hot end heater wires, they are oversized for safety reasons. 
 
-You may add additional wires to your cable chains as a replacement in chase of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! 
+You may add additional wires to your cable chains as a replacement in case of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! So may be better to keep extra wires as spares outside of the printer.
 
-Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind the adhesive fails over time due to exposure to above room temperature. Cables can be hidden in the rails. Optionally print cable covers for the rails.
+Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind that the adhesive fails over time due to exposure to above room temperature. Cables can be hidden in the rails. Optionally print cable covers for the rails.
 
 ## DC Power Supply Wiring
 Many of the latest generation of Voron printers spec the use of two or more independent power supplies.  That can include 24V, 5V, and 12V power supplies sepending on configuration.
 
-**Important!**  Connect the DC 0V (typically labelled V-) on all of your DC power supplies together to ensure they all have the same voltage reference.  If this is not done there may be difficult to diagnose issues (devices may not turn on or may be damaged due to exceeding voltage limits).
+**Important!**  Connect the DC 0V (typically labelled V-) on all of your DC power supplies together to ensure they all have the same voltage reference.  If this is not done then it may be difficult to diagnose issues (devices may not turn on or may be damaged due to exceeding voltage limits).
 
 ### Smaller Printers (V0)
 
@@ -75,17 +77,13 @@ For wiring the stepper motors, keep the same wire color sequence that your stepp
 
 If the purchased steppers do not match the color order in the documentation, there is no need to rewire just to change colors.  There is not a "standard" wire color order for these parts. If the builder decides to reterminate to change connector types or whatever, be sure to use the same order as before. The spec motors also come with a datasheet or card so you can double check the work. One can also use a multimeter to find wire pairs in the motor by measuring continuity between leads. Each lead should have continuity to the other lead in its pair.
 
-**Important:** If the motors are found later on to be going the wrong direction, repinning the connectors is _not_ required.  The direction can be inverted in the configuration later.
+**Important:** If the motors are found later on to be going the wrong direction, repinning the connectors is _not_ required.  The direction can be inverted in the software configuration later.
 
 ### Inductive Probe Wiring (V1, V2, Switchwire)
 
 The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
 
 If not closely following the BOM spec, ensure that the inductive probe purchased is a normally closed (NC) version rather than normally open (NO).  The configuration cannot be changed as that is built specifically from the factory.  A normally open (NO) probe may cause crashes if a wire breaks.
-
-### X/Y Endstop Wiring (V2)
-
-The X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops. 
 
 ### BAT85 Diode
 
@@ -106,6 +104,12 @@ While both of these configurations will work fine in an ideal world, normally cl
 Wiring mechanical endstop switches for NC operation is easy as the BOM spec switches have 3 pins exposed.  With a multimeter, probe each combination of the three pins until a pair is found that has continuity (<10 ohms resistance) when the switch is not triggered (normal state), but does not have continuity (>10M ohms resistance) when the switch is triggered (depressed).  Typically the outer two pins are the NC pins, but should be verified prior to installation.
 
 ![](./images/endstop_switch_wiring.png)
+
+
+### X/Y Endstop Wiring (V2)
+
+The X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops.
+
 
 ## Controller (MCU) Wiring
 
@@ -136,7 +140,7 @@ If installing a Mini12864 display, please follow the [Mini12864 Klipper Guide](.
 
 ### Using non-24V fans with a 24V powered MCU
 
-It is possible to use the SKR (and possibly other controllers) to control fans, LED's, and other devices even when those devices use a different voltage.  The SKR, like most controllers, uses the (-) pin to control if a device is switched on or off.
+It is possible to use the SKR (and possibly other controllers) to control fans, LEDs, and other devices even when those devices use a different voltage.  The SKR, like most controllers, uses the (-) pin to control if a device is switched on or off.
 
 For a given device, is the V+ is wired to an external power supply (e.g. 5V or 12V), and the V- is wired to the SKR, the fan can be switched on or off.  As mentioned above, this will _only_ work if the DC 0V of all of the power supplies is tied together.
 

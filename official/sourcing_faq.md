@@ -39,9 +39,9 @@ No, you can substitute ball spring post-assembly nuts from Ali just as easily in
 
 ### Can I substitute MGN(insert rail size here) for MGN9H rails?
 
-No, VORON V0/V1/V2 are not designed for anything but a MGN9H
+No, the Voron V1/V2 are not designed for anything but a MGN9H.
 
-### Why does the VORON not using IGUS products?
+### Why does VORON-Design not use IGUS products?
 
 IGUS bushings exhibit a phenomenon called stiction, therefore in small movements the bushings will actually stick instead of gliding, at small detail, this causes detrimental issues. The amount of slop required is unfavorable, tolerances are quite poor. Bushing life is low for the price when compared to Misumi and even standard chinese offerings.
 
@@ -90,7 +90,7 @@ In metric units:
 
 ### PTFE or Silicone wire?
 
-The BOM currently specifies silicone wire for bend and heat toleraance.  For an increased cost, PTFE wire is a option.  PTFE insulation is thinner and slicker, making it more effective in the drag chains.
+The BOM currently specifies silicone wire for bend and heat tolerance.  For an increased cost, PTFE wire is a option.  PTFE insulation is thinner and slicker, making it more effective in the drag chains and granting the cables a longer lifetime.
 
 ## Electronics
 
@@ -98,7 +98,7 @@ The BOM currently specifies silicone wire for bend and heat toleraance.  For an 
 
 The BTT SKR controller is inexpensive and extremely capable for the purpose. Either an SKR 1.3 or 1.4 is recommended and can be used. While both controllers have different pin configurations, they use the same controller chip. BTT is no longer producing the 1.3 and it will eventually be unavailable.
 
-The Turbo version is certainly usuable, but the additional speed is not required since most of the computing is offloaded by the Raspberry Pi.
+The Turbo version is certainly usable, but the additional speed is not required since most of the computing is handled by the Raspberry Pi.
 
 ### Can I use 0.9 degree stepper motors rather than the spec'ed 1.8 degree motors?
 
@@ -115,7 +115,7 @@ The Dragon standard flow is capable of supporting nozzles up to 0.6mm. If planni
 
 ### Does the Voron Support the Super Volcano
 
-No, its a case of [shit design and metal fatigue waiting to happen](https://www.reddit.com/r/3Dprinting/comments/blqw6s/i_believe_there_was_some_initial_concern_about/)
+No, its a case of [shit design and metal fatigue waiting to happen](https://www.reddit.com/r/3Dprinting/comments/blqw6s/i_believe_there_was_some_initial_concern_about/).
 
 ---
 
