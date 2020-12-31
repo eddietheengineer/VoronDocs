@@ -1,7 +1,7 @@
 # printer.cfg Changes & Klipper updates
 You just updated klipper, and now your printer won't start?  Don't worry.  The vast majority of these issues are quickly fixed with a few easy changes to your *printer.cfg*
 
-*Do note: this guide is only intended to highlight changes that show up in at least one stock Voron configuration.  If you have a heavily customized config, you will likely also need to have a look at the ![Klipper config changes document](https://github.com/KevinOConnor/klipper/blob/master/docs/Config_Changes.md)*
+*Do note: this guide is only intended to highlight changes that show up in at least one stock Voron configuration.  If you have a heavily customized config, you will likely also need to have a look at the [Klipper config changes document](https://github.com/KevinOConnor/klipper/blob/master/docs/Config_Changes.md)*
 
 Change Date | Printer | changes required
 --- | --- | ---
@@ -20,4 +20,4 @@ Recv: // version of the firmware on the micro-controller (fix by
 Recv: // recompiling and flashing the firmware).
 ```
 
-Remember, klipper is split into two halves.  the main software, which runs on your Pi, and the MCU firmware, which runs on the SKR or other printer control board.  These sorts of errors typically mean that you have updated the main software, but not the MCU Firmware.  You should follow the flashing process for your specific MCU board, found in the ![build docs](../../../official/build/software)
+Remember, klipper is split into two halves.  the main software, which runs on your Pi, and the MCU firmware, which runs on the SKR or other printer control board.  These sorts of errors typically mean that you have updated the main software, but not the MCU Firmware.  You should follow the flashing process for your specific MCU board, found in the [build docs](../../../official/build/software)
