@@ -62,7 +62,7 @@ More sourcing information can be found in the [sourcing FAQ](./sourcing_faq.md)
 * Set of metric hex wrenches ("keys") from at least 1.5 - 5. (Wiha, Wera , or Bondhus are preferred)
 * Screwdrivers
 * Crimpers
-	* Molex
+	* Molex (Good: IWISS IWS-3220M, Better: Engineer PA-09, Best: Molex Crimper)
 	* Ferrule
 * Needle nose pliers
 * Diagonal wire cutters, small
