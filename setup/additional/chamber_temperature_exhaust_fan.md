@@ -60,10 +60,8 @@ Add another section with a new macro.
 
 ```
 [gcode_macro M141]
-default_parameter_S: 0
-default_parameter_P: 0
 gcode:
-    SET_TEMPERATURE_FAN_TARGET temperature_fan="chamber" target={S}
+    SET_TEMPERATURE_FAN_TARGET temperature_fan="chamber" target={% set S = params.S|default(0) %} {% set P = params.P|default(0) %}
 ```
 
 Restart Klipper with a `FIRMWARE_RESTART`
